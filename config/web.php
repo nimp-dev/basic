@@ -44,7 +44,7 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        'db_amm' => require(__DIR__ . '/db_amm.php'),
+        'portal_2' => require(__DIR__ . '/portal_2.php'),
         
         'urlManager' => [
             'enablePrettyUrl' => true,

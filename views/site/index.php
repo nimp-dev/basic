@@ -18,10 +18,10 @@ $this->title = 'My Yii Application';
     <div class="body-content">
 
         <div class="row">
-            <?php foreach($res as $rest): ?>
-            <div class="col-lg-4">
-                <p><a href="<?= Url::to(['site/view','id'=>$rest->id]) ?>"><span><?= $rest->name ?></span></a></p>
-            </div>
+            <?php foreach($res as $key => $value): ?>
+                <div class="col-sm-4">
+                    <p><a href="<?= Url::to(['site/view','id'=>$key]) ?>"><span><?= $value ?></span></a></p>
+                </div>
             <?php endforeach; ?>
         </div>
 

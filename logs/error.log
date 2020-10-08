@@ -7,3 +7,6 @@
 [Wed Oct 07 15:38:11.389018 2020] [php7:error] [pid 11075] [client 127.0.0.1:42440] PHP Fatal error:  Declaration of app\\models\\Product::getDb($id) must be compatible with yii\\db\\ActiveRecord::getDb() in /var/www/basic/models/Product.php on line 7, referer: http://basic/
 [Wed Oct 07 15:38:14.226009 2020] [php7:error] [pid 10990] [client 127.0.0.1:42448] PHP Fatal error:  Declaration of app\\models\\Product::getDb($id) must be compatible with yii\\db\\ActiveRecord::getDb() in /var/www/basic/models/Product.php on line 7, referer: http://basic/
 [Wed Oct 07 15:38:19.592604 2020] [php7:error] [pid 10993] [client 127.0.0.1:42454] PHP Fatal error:  Declaration of app\\models\\Product::getDb($id) must be compatible with yii\\db\\ActiveRecord::getDb() in /var/www/basic/models/Product.php on line 7, referer: http://basic/
+[Thu Oct 08 14:03:39.094944 2020] [php7:error] [pid 18158] [client 127.0.0.1:55708] PHP Fatal error:  Cannot use [] for reading in /var/www/basic/views/site/index.php on line 23
+[Thu Oct 08 14:03:39.330072 2020] [php7:error] [pid 18157] [client 127.0.0.1:55710] PHP Fatal error:  Cannot use [] for reading in /var/www/basic/views/site/index.php on line 23
+[Thu Oct 08 14:05:41.112553 2020] [php7:error] [pid 18154] [client 127.0.0.1:55740] PHP Fatal error:  Cannot use [] for reading in /var/www/basic/views/site/index.php on line 22

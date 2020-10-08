@@ -25,7 +25,7 @@ class Product extends ActiveRecord{
         if($id=='1')
             return Yii::$app->get('db');
         if($id=='2')
-            return Yii::$app->get('db_amm');
+            return Yii::$app->get('portal_2');
     }
     
 

@@ -1,8 +1,8 @@
 <?php
-
+$db = 'portal';
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'pgsql:host=localhost;dbname=portal',
+    'dsn' => "pgsql:host=localhost;dbname='$db'",
     'username' => 'postgres',
     'password' => 'postgres',
     'charset' => 'utf8',
