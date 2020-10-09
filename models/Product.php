@@ -20,11 +20,11 @@ class Product extends ActiveRecord{
 
 	      public static function getDb()
     {
-    	$id = Yii::$app->request->get('id');
+    	$base = Yii::$app->session['db'];
                 
-        if($id=='1')
+        if($base=='1')
             return Yii::$app->get('db');
-        if($id=='2')
+        if($base=='2')
             return Yii::$app->get('portal_2');
     }
     

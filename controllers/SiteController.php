@@ -65,17 +65,17 @@ class SiteController extends Controller
     {
         $res = [1 => 'port_place',
                 2 => 'evropeisky'
-                ];
-        $session = Yii::$app->session;
-        $session->set('db',$id);        
-        return $this->render('index', compact('res'));
+                ];      
+        return $this->render('index',['res'=>$res]);
     }
 
-        public function actionView()
-    {  
-        
+        public function actionView($id)
+    {   
+        $session = Yii::$app->session;
+        $session->set('db',$id);
+        $ad = $session['db'];
         $prod = Product::find()->asArray()->all();
-        return $this->render('view', compact('prod','db' => Yii::$app->session->get('db')));  
+        return $this->render('view', ['prod'=>$prod,'db'=> Yii::$app->session->get('db'),'ad'=>$ad]);  
     }
 
 
