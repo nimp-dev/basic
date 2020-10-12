@@ -10,8 +10,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Res;
+use app\models\Menu;
 use app\models\Product;
-use app\models\Product_info;
 
 class SiteController extends Controller
 {
@@ -76,14 +76,14 @@ class SiteController extends Controller
         $session->open();
         $session->set('db',$id);
         $ad = $session['db'];
-        $prod = Product::find()->all();
+        $prod = Menu::find()->all();
         return $this->render('view', ['prod'=>$prod,'db'=> Yii::$app->session->get('db'),'ad'=>$ad]);  
     }
 
 
          public function actionPinfo($id)
      { 
-        $info = Product_info::find()->with('products')->where(['id_prod'=> $id])->all();
+        $info = Product::find()->with('menu')->where(['category_id'=> $id])->all();
         return $this->render('pinfo',['info'=>$info]);
 
      }       
