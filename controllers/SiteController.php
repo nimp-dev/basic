@@ -11,6 +11,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Res;
 use app\models\Product;
+use app\models\Product_info;
 
 class SiteController extends Controller
 {
@@ -63,8 +64,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $res = [1 => 'port_place',
-                2 => 'evropeisky'
+        $res = [1 => 'base_1(port_1)',
+                2 => 'base_2(port_2)'
                 ];      
         return $this->render('index',['res'=>$res]);
     }
@@ -72,11 +73,20 @@ class SiteController extends Controller
         public function actionView($id)
     {   
         $session = Yii::$app->session;
+        $session->open();
         $session->set('db',$id);
         $ad = $session['db'];
-        $prod = Product::find()->asArray()->all();
+        $prod = Product::find()->all();
         return $this->render('view', ['prod'=>$prod,'db'=> Yii::$app->session->get('db'),'ad'=>$ad]);  
     }
+
+
+         public function actionPinfo($id)
+     { 
+        $info = Product_info::find()->with('products')->where(['id_prod'=> $id])->all();
+        return $this->render('pinfo',['info'=>$info]);
+
+     }       
 
 
 

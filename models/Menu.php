@@ -5,7 +5,7 @@ use yii\db\ActiveRecord;
 use Yii;
 
 
-class Product extends ActiveRecord{
+class Menu extends ActiveRecord{
 
 
 	public static function primaryKey()
@@ -14,15 +14,15 @@ class Product extends ActiveRecord{
       }
 
 	public static function tableName(){
-		return 'product';
+		return 'menu';
 	}
 
-  public function getMenu(){
-    return $this->hasOne(Menu::className(),['id' => 'category_id']);
+      public function getProduct(){
+    return $this->hasOne(Product::className(),['category_id' => 'id']);
 }
-        public static function getDb()
+	      public static function getDb()
     {
-      $base = Yii::$app->session['db'];
+    	$base = Yii::$app->session['db'];
                 
         if($base=='1')
             return Yii::$app->get('db');
