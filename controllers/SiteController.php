@@ -75,9 +75,9 @@ class SiteController extends Controller
         $session = Yii::$app->session;
         $session->open();
         $session->set('db',$id);
-        $ad = $session['db'];
         $prod = Menu::find()->all();
-        return $this->render('view', ['prod'=>$prod,'db'=> Yii::$app->session->get('db'),'ad'=>$ad]);  
+        $hits = Product::find()->where(['hit'=> 1])->limit(6)->all();
+        return $this->render('view', ['prod'=>$prod,'hits'=>$hits]);  
     }
 
 

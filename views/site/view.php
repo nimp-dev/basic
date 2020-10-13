@@ -2,23 +2,20 @@
 <?php 
 use yii\helpers\Html;
 use yii\helpers\Url;
-if ($db == 1){
-	echo 'база 1';
-}
-if ($db == 2){
-	echo 'база 2';
-}
-echo '<br/>';
-$session = Yii::$app->session;
-$session->open();
-echo $session['db'];
 ?>
-<div class="container">
 	<div class="row">
+		 <div class="col-sm-4">
 		            <?php foreach($prod as $values): ?>
-		                <div class="col-sm-4">
+		                <!-- <div class="col-sm-4"> -->
 		                    <p><a href="<?= Url::to(['site/pinfo','id'=>$values->id]) ?>"><span><?= $values->name ?></span></a></p>
-	                    </div>
+	                   <!--  </div> -->
             		<?php endforeach; ?>
+		 </div>
+		 <div class="col-sm-8">
+		 	<?php foreach($hits as $hit): ?>
+		                <div class="col-sm-4">
+		                	 <p><a href="<?= Url::to(['site/pinfo','id'=>$hit->id]) ?>"><span><?= $hit->name ?></span></a></p>
+	                	</div>
+    		<?php endforeach; ?>
+		 </div>
 	</div>
-</div>

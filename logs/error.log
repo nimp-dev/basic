@@ -998,3 +998,4 @@
 [Mon Oct 12 15:16:46.859923 2020] [php7:notice] [pid 17057] [client 127.0.0.1:34702] PHP Notice:  Undefined variable: q in /var/www/basic/functions.php on line 16, referer: http://basic/
 [Mon Oct 12 15:16:46.859933 2020] [php7:notice] [pid 17057] [client 127.0.0.1:34702] PHP Notice:  Undefined variable: _SESSION in /var/www/basic/functions.php on line 9, referer: http://basic/
 [Mon Oct 12 15:16:46.859939 2020] [php7:notice] [pid 17057] [client 127.0.0.1:34702] PHP Notice:  Undefined variable: q in /var/www/basic/functions.php on line 16, referer: http://basic/
+[Tue Oct 13 09:19:53.332114 2020] [php7:warn] [pid 27321] [client 127.0.0.1:52200] PHP Warning:  The use statement with non-compound name 'Yii' has no effect in /var/www/basic/functions.php on line 2, referer: http://basic/site/pinfo?id=1
