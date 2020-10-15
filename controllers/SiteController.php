@@ -64,8 +64,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $res = [1 => 'base_1(port_1)',
-                2 => 'base_2(port_2)'
+        $res = [1 => 'Port Place (base_1)',
+                2 => 'Evropeysiy (base_2)'
                 ];      
         return $this->render('index',['res'=>$res]);
     }
@@ -151,4 +151,18 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    // other
+    public function actionSingle()
+    {
+        return $this->render('single');
+    }
+        public function actionCategory()
+    {
+        return $this->render('category');
+    }
+            public function actionStart()
+    {
+        return $this->render('start');
+    }
+
 }
