@@ -11,7 +11,7 @@ use yii\helpers\Url
                 <article class="post post-list">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="post-thumb">
+                            <div class="post-thumb" style="background-color: black">
                             	<?php if($key==1){
                                 echo '<a href="blog.html"><img src="/public/images/PORTPLACE.png" alt="" class="pull-left"></a>';
                             	}else{

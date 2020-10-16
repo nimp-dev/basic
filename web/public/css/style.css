@@ -277,7 +277,9 @@ post css
 .main-content {
     margin-top: 50px;
 }
-
+.main-content-view {
+    margin-top: 20px;
+}
 article {
     border: 1px solid #eee;
 }

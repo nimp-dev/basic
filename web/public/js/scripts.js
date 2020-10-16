@@ -68,7 +68,23 @@
 
 
 
-
 })(jQuery);
 
+$(document).ready(function(){
+    $('.content_toggle').click(function(){
+        $('.content_block').slideToggle(300);      
+        return false;
+    });
+});
 
+$(".open-panel").click(function(){
+  
+  $("html").addClass("openNav");
+  
+});
+    
+$(".close-panel, #content").click(function(){
+  
+$("html").removeClass("openNav");
+  
+});

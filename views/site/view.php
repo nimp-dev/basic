@@ -1,25 +1,43 @@
-<div class="main-content">
+<div class="main-content-view">
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                <aside class="widget">
+                    <div class="col-sm-6">
+                        Вы на :
+                    </div>
+                    <div class="col-sm-6">
+                        Меню :
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-8">
+                <!--  -->
+                <div class="row">
+                <!-- end -->
+                <?php foreach($prod as $values): ?>
+                <div class="col-md-4">
                 <article class="post">
                     <div class="post-thumb">
                         <a href="blog.html"><img src="/public/images/blog-1.jpg" alt=""></a>
 
                         <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
+                            <div class="text-uppercase text-center"><img src="/public/images/loupe.png" alt=""></div>
                         </a>
                     </div>
                     <div class="post-content">
                         <header class="entry-header text-center text-uppercase">
                             <h6><a href="#"> Travel</a></h6>
 
-                            <h1 class="entry-title"><a href="blog.html">Home is peaceful place</a></h1>
+                            <h1 class="entry-title"><a href="blog.html"><?= $values->name ?></a></h1>
 
 
                         </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        <div class="entry-content" >
+                            <a class="content_toggle" >Состав:</a>
+                            <p class="content_block" style="display: none;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                                 tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
                                 justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
                                 ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
@@ -38,151 +56,11 @@
                         </div>
                     </div>
                 </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="/public/images/abc.jpg" alt=""></a>
-
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#">craft</a></h6>
-
-                            <h1 class="entry-title"><a href="blog.html">wooden table is beautiful</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
-                            </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="/public/images/blog-2.jpg" alt=""></a>
-
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Lifestyle</a></h6>
-
-                            <h1 class="entry-title"><a href="blog.html">Small work station</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
-                            </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="/public/images/blog-3.jpg" alt=""></a>
-
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Mission</a></h6>
-
-                            <h1 class="entry-title"><a href="blog.html">Waiting to launch on the sky</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
-                            </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="blog.html"><img src="/public/images/blog-4.jpg" alt=""></a>
-
-                        <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Cloth</a></h6>
-
-                            <h1 class="entry-title"><a href="blog.html">A day labour wore jeans</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="blog.html" class="more-link">Continue Reading</a>
-                            </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
+                </div>
+                <?php endforeach; ?>
+                <!--  -->
+                </div>
+                <!-- end -->
                 <ul class="pagination">
                     <li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
