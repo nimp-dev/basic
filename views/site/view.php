@@ -1,15 +1,14 @@
+
 <div class="main-content-view">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <aside class="widget">
-                    <div class="col-sm-6">
-                        Вы на :
-                    </div>
-                    <div class="col-sm-6">
-                        Меню :
-                    </div>
+                <div class="fixed-box">
+                <aside class="widgets fixed-div">
+                        <span>Вы на : </span>
+                        <span>Меню :</span>
                 </aside>
+                </div>
             </div>
         </div>
         <div class="row">
