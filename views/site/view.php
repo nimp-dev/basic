@@ -1,13 +1,27 @@
 
+<!-- fixed-box -->
+<!-- fixed-div -->
+<!--  <div class="row">
+            <div class="col-md-12 fixed-box">
+                <div class="widgets fixed-div">
+                    <div class="row">
+                        <div class="col-sm">
+                     Вы на : 
+                        </div>
+                        <div class="col-sm">
+                     Меню : 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
 <div class="main-content-view">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="fixed-box">
-                <aside class="widgets fixed-div">
-                        <span>Вы на : </span>
-                        <span>Меню :</span>
-                </aside>
+            <div class="col-md-12 fixed-box">
+                <div class="widgets fixed-div">
+<?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
                 </div>
             </div>
         </div>
@@ -16,14 +30,14 @@
                 <!--  -->
                 <div class="row">
                 <!-- end -->
-                <?php foreach($prod as $values): ?>
+                <?php foreach($products as $values): ?>
                 <div class="col-md-4">
                 <article class="post">
                     <div class="post-thumb">
                         <a href="blog.html"><img src="/public/images/blog-1.jpg" alt=""></a>
 
                         <a href="blog.html" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center"><img src="/public/images/loupe.png" alt=""></div>
+                            <div class="text-uppercase text-center"><img src="/public/images/loupe1.png" alt=""></div>
                         </a>
                     </div>
                     <div class="post-content">
@@ -68,7 +82,7 @@
                     <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
                 </ul>
             </div>
-            <div class="col-md-4" data-sticky_column>
+            <div class="col-md-4">
                 <div class="primary-sidebar">
                     
                     <aside class="widget">

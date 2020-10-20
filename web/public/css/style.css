@@ -1642,22 +1642,26 @@ p.go-back-home a:hover {
     border-color: #00BFF3;
 }
 
-.fixed-box {
-    height: 60px;
-        margin-bottom: 20px;
-}
-.fixed-div {
-    height: 60px;
-    text-align: center;
-    padding: 20px 10px;    
-}
+
 .fixed {
     position: fixed;
     z-index: 9999;
     top: 0;
 }
+.fixed-box {
+        height: 60px;
+        margin-bottom: 20px;
+}
+.fixed-div {
+    height: 60px;
+    padding: 20px /*10px*/;    
+}
 
 .widgets {
     background-color: #fff;
     border: 1px solid #eee;
+}
+.listItem{
+float: left;
+padding-right:100px;  
 }

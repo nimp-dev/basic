@@ -12,6 +12,7 @@ use app\models\ContactForm;
 use app\models\Res;
 use app\models\Menu;
 use app\models\Product;
+use yii\helpers\ArrayHelper;
 
 class SiteController extends Controller
 {
@@ -75,9 +76,11 @@ class SiteController extends Controller
         $session = Yii::$app->session;
         $session->open();
         $session->set('db',$id);
-        $prod = Menu::find()->all();
-        $hits = Product::find()->where(['hit'=> 1])->limit(6)->all();
-        return $this->render('view', ['prod'=>$prod,'hits'=>$hits]);  
+        $menu = Menu::find()->all();
+        $products = Product::find()->all();
+        $items = ArrayHelper::map(Menu::find()->all(), 'id', 'name');
+        return $this->render('view', ['menu'=>$menu,'products'=>$products]);
+
     }
 
 
