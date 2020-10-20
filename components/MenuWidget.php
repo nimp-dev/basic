@@ -22,23 +22,11 @@ class MenuWidget extends Widget{
 	}
 
 	public function run(){
-		// get cache
-		if($this->tpl == 'menu.php'){
-			$menu = Yii::$app->cache->get('menu');
-			if($menu) return $menu;
-		}
-		
 		$this->data = Menu::find()->indexBy('id')->asArray()->all();
 		$this->tree = $this->getTree();
 		$this->menuHtml = $this->getMenuHtml($this->tree);
-		//set cache
-		if($this->tpl == 'menu.php'){
-		Yii::$app->cache->set('menu', $this->menuHtml, 60);
-		}
 		return $this->menuHtml;
 	}
-
-
 
 	protected function getTree(){
     $tree = [];
@@ -49,12 +37,12 @@ class MenuWidget extends Widget{
             $this->data[$node['parent_id']]['childs'][$node['id']] = &$node;
     }
     return $tree;
-}
+	}
 
-	protected function getMenuHtml($tree, $tab = ''){
+		protected function getMenuHtml($tree, $tab = ''){
 	    $str = '';
-	    foreach ($tree as $menu) {
-	        $str .= $this->catToTemplate($menu, $tab);
+	    foreach ($tree as $category) {
+	        $str .= $this->catToTemplate($category, $tab);
 	    }
 	    return $str;
 	}
@@ -64,5 +52,7 @@ class MenuWidget extends Widget{
 	    include __DIR__ . '/menu_tpl/' . $this->tpl;
 	    return ob_get_clean();
 	}
+
+
 
 }
