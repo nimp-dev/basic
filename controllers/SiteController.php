@@ -78,7 +78,6 @@ class SiteController extends Controller
         $session->set('db',$id);
         $menu = Menu::find()->all();
         $products = Product::find()->all();
-        $items = ArrayHelper::map(Menu::find()->all(), 'id', 'name');
         return $this->render('view', ['menu'=>$menu,'products'=>$products]);
 
     }

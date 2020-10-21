@@ -18,15 +18,28 @@
 
 <div class="main-content-view">
     <div class="container">
-        <div class="row">
+<!--         <div class="row">
             <div class="col-md-12 fixed-box">
-                <div class="widgets fixed-div">
-<?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
-                </div>
+                <div class="widgets fixed-div"> -->
+
+<!--                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-md-8">
+<div class="wrapper">
+<div class="menu">
+<a href="#" class="menu-icon">MENU
+<span><i class="fas fa-bars"></i></span>
+</a>
+<nav class="menu-list">
+<?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?>
+</nav>
+</div>
+<section>
+<h1>Фотостудия</h1>
+</section>
+</div>
                 <!--  -->
                 <div class="row">
                 <!-- end -->

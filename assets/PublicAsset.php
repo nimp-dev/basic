@@ -28,6 +28,7 @@ class PublicAsset extends AssetBundle
     "public/css/owl.transitions.css",
     "public/css/style.css",
     "public/css/responsive.css",
+    "public/css/jquery-ui.css",
     ];
     public $js = [
     "public/js/jquery-1.11.3.min.js",
@@ -35,6 +36,7 @@ class PublicAsset extends AssetBundle
     "public/js/owl.carousel.min.js",
     "public/js/jquery.stickit.min.js",
     "public/js/menu.js",
+    "public/js/jquery-ui.js",
     "public/js/scripts.js",
     ];
     public $depends = [

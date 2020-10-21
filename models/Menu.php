@@ -20,6 +20,19 @@ class Menu extends ActiveRecord{
       public function getProduct(){
     return $this->hasOne(Product::className(),['category_id' => 'id']);
 }
+
+     public function attributeLabels()
+    {
+        return [
+            'id' => '№ категории',
+            'parent_id' => 'Родительская категория',
+            'name' => 'Название',
+            'keywords' => 'Ключевые слова',
+            'description' => 'Мета-описание',
+        ];
+    }
+
+
 	      public static function getDb()
     {
     	$base = Yii::$app->session['db'];
