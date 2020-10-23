@@ -1687,18 +1687,21 @@ padding-right:100px;
 .menu {
 
   position: fixed;
-  left: 0;
+  /*left: 0;*/
   /*top: 0;*/
   z-index: 1;
   width: 50%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   transition: 0.5s;
   transform: translateX(-100%);
+   opacity: 0.5;
+
 }
+
 
 .menu-list {
   display: flex;
@@ -1706,6 +1709,7 @@ padding-right:100px;
   align-items: center;
   height: 50%;
   flex-direction: column;
+
 }
 
 .menu-list a {
@@ -1719,15 +1723,17 @@ padding-right:100px;
   color: #9b59b6;
   font-size: 200%;
   position: absolute;
-  right: -90px;
+  right: -150px;
   top: 0%;
   background-color: #fff;
   /*transform:rotate(90deg);*/
   padding: 10px;
-
 }
 .menu_active {
   transform: translateX(0%);
+}
+.opacyty{
+        opacity: 1;
 }
 
 
