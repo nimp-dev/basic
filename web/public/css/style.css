@@ -1735,5 +1735,10 @@ padding-right:100px;
 .opacyty{
         opacity: 1;
 }
-
-
+.new,
+.sale {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(0%);
+}
