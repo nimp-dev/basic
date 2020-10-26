@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 ?>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -32,13 +33,15 @@ use yii\helpers\Url;
                         <div class="wrapper">
                             <div class="menu">
                             <p href="#" class="menu-icon">MENU
-                            <span><i class="fas fa-angle-double-up"></i></span>
+                                <span><i class="fas fa-angle-double-up"></i></span>
                             </p>
                             <nav class="menu-list">
+                                <h3 class="entry-title text-center"><a><?=  $info->name ?></a></h3>
                             <?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?>
                             </nav>
                             </div>
-                        </div>
+                        </div>  
+                        <h3 class="entry-title text-center"><a><?= $category->name ?> | <?=$info->name?></a></h3>
 
                   <!-- если непусто - выводить товары-->          <?php if(!empty($catproduct)) :?> 
                                 <!-- end -->
@@ -84,16 +87,16 @@ use yii\helpers\Url;
                         </div>
                         <?php endforeach; ?>
                                 <!--  -->
+                                                                  <?php else : ?>
+                                                                    <h1> пустая категория </h1>
                   <!-- если непусто - выводить товары-->          <?php endif; ?>
                     </div>
                     <!-- end -->
-                    <ul class="pagination">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                    </ul>
+                    <?php
+                            echo LinkPager::Widget([
+                                'pagination' => $pages,
+                            ])
+                     ?>
                                        
                         
                 </div>

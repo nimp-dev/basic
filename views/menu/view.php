@@ -1,7 +1,9 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
 ?>
+
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <!-- fixed-box -->
@@ -29,18 +31,20 @@ use yii\helpers\Url;
                     
                 <div class="col-md-8">
                     <div class="row">
+                                                
                         <div class="wrapper">
                             <div class="menu">
                             <p href="#" class="menu-icon">MENU
                             <span><i class="fas fa-angle-double-up"></i></span>
                             </p>
                             <nav class="menu-list">
+                                <h3 class="entry-title text-center"><a><?=  $info->name ?></a></h3>
                             <?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?>
                             </nav>
                             </div>
                         </div>
-
-                  <!-- если непусто - выводить товары-->          <?php if(!empty($products)) :?> 
+                                            <h3 class="entry-title text-center"><a><?= $info->name ?></a></h3>
+                  <!-- если непусто - выводить товары-->          <?php $i=0; if(!empty($products)) :?> 
                                 <!-- end -->
                         <?php foreach($products as $values): ?>
                         <div class="col-md-4">
@@ -82,20 +86,23 @@ use yii\helpers\Url;
                                 </div>
                             </article>
                         </div>
+                        <?php $i++; ?>
+                            <?php if($i % 3 == 0): ?>
+                                <div class="clearfix"></div>
+                            <?php endif; ?>
                         <?php endforeach; ?>
+                        <div class="clearfix"></div>        
+                                             <?php
+                                                echo LinkPager::Widget([
+                                                'pagination' => $pages,
+                                                ])
+                                            ?>
                                 <!--  -->
-                  <!-- если непусто - выводить товары-->          <?php endif; ?>
-                    </div>
-                    <!-- end -->
-                    <ul class="pagination">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                    </ul>
-                                       
-                        
+                  <!-- если непусто - выводить товары-->
+                                                                    <?php else :?>
+                                                                    <h2> пусто </h2>
+                                                                    <?php endif;?>
+                    </div>                        
                 </div>
                    
                 <div class="col-md-4">
