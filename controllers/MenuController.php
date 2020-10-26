@@ -25,9 +25,9 @@ class MenuController extends AppController
         $session->open();
         $session->set('db',$id);
         $menu = Menu::find()->all();
-        $query = Product::find();
-        $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 9, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
-        $products = $query->offset($pages->offset)->limit($pages->limit)->all();
+            $query = Product::find();
+            $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 9, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
+            $products = $query->offset($pages->offset)->limit($pages->limit)->all();
         $info = Info::findOne(1);
         $this->setMeta('Portal |'. $info->name);
         return $this->render('view', ['menu'=>$menu,'products'=>$products,'info'=>$info,'pages'=>$pages]);
@@ -41,9 +41,11 @@ class MenuController extends AppController
     		}else{
     		$query = Product::find();	
     		}
-    		$pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 9, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
-    		$category = Menu::findOne($id);
-    		$catproduct = $query->offset($pages->offset)->limit($pages->limit)->all();
+        		$pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 2, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
+        		$catproduct = $query->offset($pages->offset)->limit($pages->limit)->all();
+            $category = Menu::findOne($id);
+
+
     		$this->setMeta($info->name . '|' . $category->name, $category->keywords,$category->description);
 
     		return $this->render('viewcat',['catproduct'=>$catproduct,'info'=>$info,'category'=>$category,'pages'=>$pages]);

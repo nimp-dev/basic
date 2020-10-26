@@ -1742,3 +1742,23 @@ padding-right:100px;
     right: 0;
     transform: translateX(0%);
 }
+
+.amount {
+    width:200px;
+    margin:20px auto;
+}
+.amount span {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:#ededed;
+    cursor:pointer;
+    text-align:center;
+}
+.amount span:hover {
+    background:#dfdfdf;
+}
+.amount input {
+    width:30px;
+    text-align:center;
+}

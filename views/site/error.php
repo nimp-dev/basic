@@ -8,8 +8,7 @@
                         <section class="error-404 not-found text-center">
                             <h1 class="404">404</h1>
 
-                            <p class="lead">Sorry, we could not found the page you are looking for!</p>
-
+ 
                             <div class="row">
                                 <div class="col-sm-4 col-sm-offset-4">
                                     <form role="search" method="get" id="searchform" action="#">

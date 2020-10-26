@@ -51,6 +51,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'menu/<id:\d+>' => 'menu/viewcat',
+                'menu/<id:\d+>' => 'menu/view',
             ],
         ],
         

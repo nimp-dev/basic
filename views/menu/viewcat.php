@@ -43,7 +43,7 @@ use yii\widgets\LinkPager;
                         </div>  
                         <h3 class="entry-title text-center"><a><?= $category->name ?> | <?=$info->name?></a></h3>
 
-                  <!-- если непусто - выводить товары-->          <?php if(!empty($catproduct)) :?> 
+                  <!-- если непусто - выводить товары-->          <?php $i=0; if(!empty($catproduct)) :?> 
                                 <!-- end -->
                         <?php foreach($catproduct as $values): ?>
                         <div class="col-md-4">
@@ -56,13 +56,18 @@ use yii\widgets\LinkPager;
                                     </a>
                                 </div>
                                 <div class="post-content">
-                                    <header class="entry-header text-center text-uppercase">
-                                        <h5><?=$values->price?></h5>
-
-                                        <h1 class="entry-title"><a href="blog.html"><?= $values->name ?></a></h1>
-
-
-                                    </header>
+                                <span>
+                                    <span><?= $values->price ?></span>
+<div class="amount">
+    <span class="down">-</span>
+    <input type="text" value="1" />
+    <span class="up">+</span>
+    <a href="<?= Url::to(['cart/add','id'=>$values->id ]) ?>" data-id="<?= $values->id ?>">
+    <i class="fa fa-shopping-cart"></i>by
+    </a>
+</div>
+                                    <span><?= $values->name ?></span>
+                                </span>
                                     <!-- <div class="entry-content" >
                                         <a class="content_toggle" >Состав:</a>
                                         <p class="content_block" style="display: none;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
@@ -85,20 +90,24 @@ use yii\widgets\LinkPager;
                                 </div>
                             </article>
                         </div>
+                        <?php $i++; ?>
+                            <?php if($i % 3 == 0): ?>
+                                <div class="clearfix"></div>
+                            <?php endif; ?>
                         <?php endforeach; ?>
+                        <div class="clearfix"></div> 
                                 <!--  -->
-                                                                  <?php else : ?>
-                                                                    <h1> пустая категория </h1>
-                  <!-- если непусто - выводить товары-->          <?php endif; ?>
+                                    <?php
+                                        echo LinkPager::Widget([
+                                        'pagination' => $pages,
+                                        ])
+                                    ?>
+                            <?php else :?>
+                            <h2> пусто </h2>
+                            <?php endif;?>                                                
+                  <!-- если непусто - выводить товары--> 
                     </div>
-                    <!-- end -->
-                    <?php
-                            echo LinkPager::Widget([
-                                'pagination' => $pages,
-                            ])
-                     ?>
-                                       
-                        
+                    <!-- end -->                                                          
                 </div>
                    
                 <div class="col-md-4">
