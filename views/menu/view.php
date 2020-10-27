@@ -57,13 +57,18 @@ use yii\widgets\LinkPager;
                                     </a>
                                 </div>
                                 <div class="post-content">
-                                    <header class="entry-header text-center text-uppercase">
-                                        <h5><?=$values->price?></h5>
-
-                                        <h1 class="entry-title"><a href="blog.html"><?= $values->name ?></a></h1>
-
-
-                                    </header>
+                                <span>
+                                    <span><?= $values->price ?></span>
+<div class="amount">
+    <span class="down">-</span>
+    <input type="text" value="1" />
+    <span class="up">+</span>
+    <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$values->id ]) ?>" data-id="<?= $values->id ?>">
+    <i class="fa fa-shopping-cart"></i>by
+    </a>
+</div>
+                                    <span><?= $values->name ?></span>
+                                </span>
                                     <!-- <div class="entry-content" >
                                         <a class="content_toggle" >Состав:</a>
                                         <p class="content_block" style="display: none;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod

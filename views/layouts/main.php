@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\PublicAsset;
+use yii\helpers\Url;
 
 PublicAsset::register($this);
 ?>
@@ -26,6 +27,7 @@ PublicAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+
 
 <nav class="navbar main-menu navbar-default">
     <div class="container">
@@ -197,6 +199,18 @@ PublicAsset::register($this);
         </div>
     </div>
 </footer>
+<?php
+\yii\bootstrap\Modal::begin([
+    'header' => '<h2>Корзина</h2>',
+    'id' => 'cart',
+    'size'=> 'modal-lg',
+    'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+        <a href="' . Url::to(['cart/view']) . '" class="btn btn-success">Оформить заказ</a>
+        <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>'
+]);
+
+\yii\bootstrap\Modal::end();
+?>
 
 <?php $this->endBody() ?>
 </body>

@@ -1762,3 +1762,13 @@ padding-right:100px;
     width:30px;
     text-align:center;
 }
+
+
+/* иконка карточки */
+.add-to-cart{
+    color: green;
+}
+
+.del-item{
+    cursor: pointer;
+}
