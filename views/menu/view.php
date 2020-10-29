@@ -71,66 +71,23 @@ use yii\widgets\LinkPager;
                         </div>
 
             <div class="row">
+                
                     
                 <div class="col-md-8">
-                    <div class="row">                                                
-<?php $categ=0 ;?>
-                  <!-- если непусто - выводить товары-->          <?php $i=0; if(!empty($products)) :?> 
-                                <!-- end -->                              
-                        <?php foreach($products as $values): ?>
-                            <?php if($values->category_id != $categ){
-                                $categ = $values->category_id;
-                                echo '<div class="row">
-                                <div> new kategiri </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                ';
-                            }
+                    <?php $categor='';?>
+                    <?php foreach ($products as $value) :?>
+                        <?php if($value->menu['name']!= $categor):?>
+                            <?php $categor = $value->menu['name'];?>
+                            
+                            <h3><?=$categor?></h3>
 
-                             ?>
-                        <div class="col-md-4">
-                            <article class="post">
-                                <div class="post-thumb">
-                                    <!-- <a href="blog.html"><img src="/public/images/blog-1.jpg" alt=""></a> -->
-                                     <?= Html::img("@web/public/images/products/{$values->img}",['alt'=>$values->name])?>  
-                                    <a href="blog.html" class="post-thumb-overlay text-center">
-                                        <div class="text-uppercase text-center"><img src="/public/images/loupe1.png" alt=""></div>
-                                    </a>
-                                </div>
-                                <div class="post-content">
-                                <span>
-                                    <span><?= $values->price ?></span>
-<div class="amount">
-    <span class="down">-</span>
-    <input type="text" value="1" id="qty"/>
-    <span class="up">+</span>
-    <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$values->id ]) ?>" data-id="<?= $values->id ?>">
-    <i class="fa fa-shopping-cart"></i>by
-    </a>
-</div>
-                                    <span><?= $values->name ?></span>
-                                    <span><?= $values->category_id ?></span>
-                                </span>
-
-                                </div>
-                            </article>
+                        <?php endif;?>
+                        <div class="<?=$value->category_id?>" >
+                        <?=$value->name?><br>
+                        <!--  -->
                         </div>
 
-
-
-                        <?php endforeach; ?>
-                        <div class="clearfix"></div>        
-                                             <?php
-                                                echo LinkPager::Widget([
-                                                'pagination' => $pages,
-                                                ])
-                                            ?>
-                                <!--  -->
-                  <!-- если непусто - выводить товары-->
-                                                                    <?php else :?>
-                                                                    <h2> пусто </h2>
-                                                                    <?php endif;?>
-                    </div>                        
+                    <?php endforeach ;?> 
                 </div>
                    
                 <div class="col-md-4">

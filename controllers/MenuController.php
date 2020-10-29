@@ -25,12 +25,10 @@ class MenuController extends AppController
         $session->open();
         $session->set('db',$id);
         $menu = Menu::find()->all();
-            $query = Product::find();
-            $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 20, 'forcePageParam'=>false, 'pageSizeParam'=>false]);
-            $products = $query->offset($pages->offset)->limit($pages->limit)->all();
+        $products = Product::find()->with('menu')->all();;
         $info = Info::findOne(1);
         $this->setMeta('Portal |'. $info->name);
-        return $this->render('view', ['menu'=>$menu,'products'=>$products,'info'=>$info,'pages'=>$pages]);
+        return $this->render('view', ['menu'=>$menu,'products'=>$products,'info'=>$info]);
 
     }
 
