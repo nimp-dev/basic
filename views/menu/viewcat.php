@@ -32,15 +32,18 @@ use yii\widgets\LinkPager;
                     <div class="row">
                         <div class="wrapper">
                             <div class="menu">
+
+                            <a href="#" onclick="return getCart()" class="menu-icon_c">Cart<span><i class="fa fa-shopping-cart"></i></span></a>
+
                             <p href="#" class="menu-icon">MENU
-                                <span><i class="fas fa-angle-double-up"></i></span>
+                            <span><i class="fas fa-angle-double-up"></i></span>
                             </p>
                             <nav class="menu-list">
                                 <h3 class="entry-title text-center"><a><?=  $info->name ?></a></h3>
                             <?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?>
                             </nav>
                             </div>
-                        </div>  
+                        </div>
                         <h3 class="entry-title text-center"><a><?= $category->name ?> | <?=$info->name?></a></h3>
 
                   <!-- если непусто - выводить товары-->          <?php $i=0; if(!empty($catproduct)) :?> 
@@ -62,7 +65,7 @@ use yii\widgets\LinkPager;
     <span class="down">-</span>
     <input type="text" value="1" />
     <span class="up">+</span>
-    <a href="<?= Url::to(['cart/add','id'=>$values->id ]) ?>" data-id="<?= $values->id ?>">
+    <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$values->id ]) ?>" data-id="<?= $values->id ?>">
     <i class="fa fa-shopping-cart"></i>by
     </a>
 </div>

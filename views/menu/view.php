@@ -34,6 +34,9 @@ use yii\widgets\LinkPager;
                                                 
                         <div class="wrapper">
                             <div class="menu">
+
+                            <a href="#" onclick="return getCart()" class="menu-icon_c">Cart<span><i class="fa fa-shopping-cart"></i></span></a>
+
                             <p href="#" class="menu-icon">MENU
                             <span><i class="fas fa-angle-double-up"></i></span>
                             </p>
@@ -61,7 +64,7 @@ use yii\widgets\LinkPager;
                                     <span><?= $values->price ?></span>
 <div class="amount">
     <span class="down">-</span>
-    <input type="text" value="1" />
+    <input type="text" value="1" id="qty"/>
     <span class="up">+</span>
     <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$values->id ]) ?>" data-id="<?= $values->id ?>">
     <i class="fa fa-shopping-cart"></i>by

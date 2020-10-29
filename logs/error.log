@@ -1572,3 +1572,7 @@
 [Mon Oct 26 09:47:19.419741 2020] [php7:error] [pid 2843] [client 127.0.0.1:34846] PHP Fatal error:  Cannot use [] for reading in /var/www/basic/views/menu/view.php on line 46, referer: http://basic/
 [Mon Oct 26 09:47:23.588193 2020] [php7:error] [pid 9672] [client 127.0.0.1:34848] PHP Fatal error:  Cannot use [] for reading in /var/www/basic/views/menu/view.php on line 46, referer: http://basic/
 [Mon Oct 26 09:47:25.621657 2020] [php7:error] [pid 5682] [client 127.0.0.1:34852] PHP Fatal error:  Cannot use [] for reading in /var/www/basic/views/menu/view.php on line 46, referer: http://basic/
+[Wed Oct 28 13:03:46.504382 2020] [php7:notice] [pid 27611] [client 127.0.0.1:41502] PHP Notice:  Undefined variable: info in /var/www/basic/views/layouts/main.php on line 76
+[Wed Oct 28 13:03:46.504417 2020] [php7:notice] [pid 27611] [client 127.0.0.1:41502] PHP Notice:  Trying to get property 'name' of non-object in /var/www/basic/views/layouts/main.php on line 76
+[Wed Oct 28 13:04:14.715282 2020] [php7:notice] [pid 25798] [client 127.0.0.1:41508] PHP Notice:  Undefined variable: info in /var/www/basic/views/layouts/main.php on line 76
+[Wed Oct 28 13:04:14.715307 2020] [php7:notice] [pid 25798] [client 127.0.0.1:41508] PHP Notice:  Trying to get property 'name' of non-object in /var/www/basic/views/layouts/main.php on line 76

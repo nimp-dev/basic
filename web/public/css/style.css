@@ -1729,6 +1729,16 @@ padding-right:100px;
   /*transform:rotate(90deg);*/
   padding: 10px;
 }
+.menu-icon_c {
+  color: #9b59b6;
+  font-size: 200%;
+  position: absolute;
+  right: -100px;
+  top: 10%;
+  background-color: #fff;
+  /*transform:rotate(90deg);*/
+  padding: 10px;
+}
 .menu_active {
   transform: translateX(0%);
 }

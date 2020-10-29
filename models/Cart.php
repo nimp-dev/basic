@@ -30,4 +30,6 @@ class Cart extends ActiveRecord
         $_SESSION['cart.sum'] -= $sumMinus;
         unset($_SESSION['cart'][$id]);
     } 
+
+
 }

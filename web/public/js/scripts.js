@@ -173,7 +173,22 @@ $(document).ready(function() {
             }
         });
     });
-    
+
+        function getCart(){
+        $.ajax({
+            url: '/cart/show',
+            type: 'GET',
+            success: function(res){
+                if(!res) alert('Ошибка!');
+                showCart(res);
+            },
+            error: function(){
+                alert('Error!');
+            }
+        });
+        return false;
+    }
+
 
     function clearCart(){
         $.ajax({
