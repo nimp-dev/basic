@@ -75,18 +75,16 @@ use yii\widgets\LinkPager;
                     
                 <div class="col-md-8">
                     <?php $categor='';?>
-                    <?php foreach ($products as $value) :?>
+                    <?php  foreach ($products as $value) :?>
                         <?php if($value->menu['name']!= $categor):?>
                             <?php $categor = $value->menu['name'];?>
-                            
+                                                     <div class="clearfix"></div>
                             <h3><?=$categor?></h3>
-
                         <?php endif;?>
-                        <div class="<?=$value->category_id?>" >
-                        <?=$value->name?><br>
-                        <!--  -->
-                        </div>
 
+                       <div class="col-sm-4">
+                        <?=$value->name?>
+                       </div>
                     <?php endforeach ;?> 
                 </div>
                    
