@@ -26,30 +26,68 @@ use yii\widgets\LinkPager;
 <div class="main-content-view">
     
         <div class="container">
+            <!-- <div class="fixed-box">
+                <div class="fixed-div">
+                <nav class="four">
+                  <ul>
+                    <li><a href="#">название<i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                    <li><a onclick="return getCart()" href="#">корзина <i class="fa fa-shopping-cart"></i></a></li>
+                   -- <li><a class="menu-icon" href="#">меню <i class="fas fa-angle-double-right"></i></a></li>
+                    <li><a href="#">Contact <i class="fa fa-phone" aria-hidden="true"></i></a>
+                              <ul class="submenu">
+                                <li><a href="">Item 1</a></li>
+                                <li><a href="">Item 2</a></li>
+                              </ul>
+                    </li>
+                  </ul>
+                </nav>
+                </div>
+            </div> -->
+            <div class="fixed-box">
+                <div class="fixed-div">
+                                <nav class="four">
+                                  <ul class="topmenu">
+                                    <li><a href="#">название <i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                                    <li><a onclick="return getCart()" href="#">корзина <i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a>меню <i class="fas fa-angle-double-down" aria-hidden="true"></i></a>
+                                      <ul class="submenu">
+                                        <li><?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?></li>
+                                      </ul>
+                                    </li>
 
-            <div class="row">
-                    
-                <div class="col-md-8">
-                    <div class="row">
-                                                
+                                  </ul>
+                                </nav>
+                </div>
+            </div>
+
+
                         <div class="wrapper">
                             <div class="menu">
-
-                            <a href="#" onclick="return getCart()" class="menu-icon_c">Cart<span><i class="fa fa-shopping-cart"></i></span></a>
-
-                            <p href="#" class="menu-icon">MENU
-                            <span><i class="fas fa-angle-double-up"></i></span>
-                            </p>
                             <nav class="menu-list">
                                 <h3 class="entry-title text-center"><a><?=  $info->name ?></a></h3>
                             <?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?>
                             </nav>
                             </div>
                         </div>
-                                            <h3 class="entry-title text-center"><a><?= $info->name ?></a></h3>
+
+            <div class="row">
+                    
+                <div class="col-md-8">
+                    <div class="row">                                                
+<?php $categ=0 ;?>
                   <!-- если непусто - выводить товары-->          <?php $i=0; if(!empty($products)) :?> 
-                                <!-- end -->
+                                <!-- end -->                              
                         <?php foreach($products as $values): ?>
+                            <?php if($values->category_id != $categ){
+                                $categ = $values->category_id;
+                                echo '<div class="row">
+                                <div> new kategiri </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                ';
+                            }
+
+                             ?>
                         <div class="col-md-4">
                             <article class="post">
                                 <div class="post-thumb">
@@ -71,33 +109,15 @@ use yii\widgets\LinkPager;
     </a>
 </div>
                                     <span><?= $values->name ?></span>
+                                    <span><?= $values->category_id ?></span>
                                 </span>
-                                    <!-- <div class="entry-content" >
-                                        <a class="content_toggle" >Состав:</a>
-                                        <p class="content_block" style="display: none;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                            tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                            justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                            ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                            eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                                        </p>
 
-                                        <div class="btn-continue-reading text-center text-uppercase">
-                                            <a href="blog.html" class="more-link">Continue Reading</a>
-                                        </div>
-                                    </div>
-                                    <div class="social-share">
-                                        <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                                        <ul class="text-center pull-right">
-                                            <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                                        </ul>
-                                    </div> -->
                                 </div>
                             </article>
                         </div>
-                        <?php $i++; ?>
-                            <?php if($i % 3 == 0): ?>
-                                <div class="clearfix"></div>
-                            <?php endif; ?>
+
+
+
                         <?php endforeach; ?>
                         <div class="clearfix"></div>        
                                              <?php
