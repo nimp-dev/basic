@@ -1900,3 +1900,44 @@ ul {
 .modal-dialog{
     margin-top: 100px;
 }
+
+.prod-plate{
+    background-color: #ffffff;
+    border-radius: 6px;
+    color: #fff;
+    display: flex;
+    padding: 12px 8px;
+    text-align: center;
+    width: 100%;
+    margin: 5px;
+}
+
+.section-img {
+  float: left;
+  width: 53%;
+}
+.section-content {
+  float: right;
+  width: 47%;
+  color: black;
+  text-align: center;
+}
+
+.section-content-name{
+    font-size: 20px;
+}
+
+.cat-border{
+    border: 0px solid gray;
+    border-radius: 6px;
+    background-color: #fcfafa;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.cat-border_prod{
+    border: 0px solid gray;
+    border-radius: 6px;
+    margin:6px ;
+    background-color: #fcfafa;
+    box-shadow: 0 0 0px rgba(0,0,0,0.5);
+}

@@ -24,8 +24,8 @@ class MenuController extends AppController
         $session = Yii::$app->session;
         $session->open();
         $session->set('db',$id);
-        $menu = Menu::find()->all();
-        $products = Product::find()->with('menu')->all();;
+        $menu = Menu::find()->with('product')->asArray()->all();
+        $products = Product::find();
         $info = Info::findOne(1);
         $this->setMeta('Portal |'. $info->name);
         return $this->render('view', ['menu'=>$menu,'products'=>$products,'info'=>$info]);
