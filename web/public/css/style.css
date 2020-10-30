@@ -1937,7 +1937,7 @@ ul {
 .cat-border_prod{
     border: 0px solid gray;
     border-radius: 6px;
-    margin:6px ;
+    margin:8px ;
     background-color: #fcfafa;
     box-shadow: 0 0 0px rgba(0,0,0,0.5);
 }
