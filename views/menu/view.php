@@ -72,6 +72,7 @@ use yii\widgets\LinkPager;
 
             <div class="row">
                 
+<<<<<<< HEAD
                     <!--  -->
                 <div class="col-md-12">
 
@@ -105,6 +106,111 @@ use yii\widgets\LinkPager;
                                                     </div>
                                                 <?php endforeach ;?>
 
+=======
+                    
+                <div class="col-md-8">
+                    <?php $categor='';?>
+                    <?php  foreach ($products as $value) :?>
+                        <?php if($value->menu['name']!= $categor):?>
+                            <?php $categor = $value->menu['name'];?>
+                                                     <div class="clearfix"></div>
+                            <h3><?=$categor?></h3>
+                        <?php endif;?>
+
+                       <div class="col-sm-4">
+                        <?=$value->name?>
+                       </div>
+                    <?php endforeach ;?> 
+                </div>
+                   
+                <div class="col-md-4">
+                    <div class="primary-sidebar">
+                        
+                        <aside class="widget">
+                            <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
+
+                            <div class="popular-post">
+
+
+                                <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
+
+                                    <div class="p-overlay"></div>
+                                </a>
+
+                                <div class="p-content">
+                                    <a href="#" class="text-uppercase">Home is peaceful Place</a>
+                                    <span class="p-date">February 15, 2016</span>
+
+                                </div>
+                            </div>
+                            <div class="popular-post">
+
+                                <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
+
+                                    <div class="p-overlay"></div>
+                                </a>
+
+                                <div class="p-content">
+                                    <a href="#" class="text-uppercase">Home is peaceful Place</a>
+                                    <span class="p-date">February 15, 2016</span>
+                                </div>
+                            </div>
+                            <div class="popular-post">
+
+
+                                <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
+
+                                    <div class="p-overlay"></div>
+                                </a>
+
+                                <div class="p-content">
+                                    <a href="#" class="text-uppercase">Home is peaceful Place</a>
+                                    <span class="p-date">February 15, 2016</span>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="widget pos-padding">
+                            <h3 class="widget-title text-uppercase text-center">Recent Posts</h3>
+
+                            <div class="thumb-latest-posts">
+
+
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
+                                            <div class="p-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="p-content">
+                                        <a href="#" class="text-uppercase">Home is peaceful Place</a>
+                                        <span class="p-date">February 15, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumb-latest-posts">
+
+
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
+                                            <div class="p-overlay"></div>
+                                        </a>
+                                    </div>
+                                    <div class="p-content">
+                                        <a href="#" class="text-uppercase">Home is peaceful Place</a>
+                                        <span class="p-date">February 15, 2016</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumb-latest-posts">
+
+
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
+                                            <div class="p-overlay"></div>
+                                        </a>
+>>>>>>> a16080496d9045bb6898eb781f17e6126feb4cae
                                     </div>
                         <div class="clearfix"></div>
                         <?php endif ;?>
