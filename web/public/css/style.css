@@ -277,9 +277,16 @@ post css
 .main-content {
     margin-top: 50px;
 }
-.main-content-view {
+.main-content-port {
     margin-top: 20px;
+    background-image:url(/public/images/PORTPLACE_b.png); 
 }
+
+.main-content-evrop {
+    margin-top: 20px;
+    background-image:url(/public/images/evrop.jpg);
+}
+
 article {
     border: 1px solid #eee;
 }
@@ -1776,7 +1783,13 @@ padding-right:100px;
 
 /* иконка карточки */
 .add-to-cart{
-    color: green;
+    color: #5cb85c;
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #39b54a; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+   }
 }
 
 .del-item{
@@ -1821,7 +1834,10 @@ padding-right:100px;
 }*/
 
 .four {
-  background: #FFD7A7;
+  background: #ffffff;
+    border: 0px solid gray;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .four a {
@@ -1840,7 +1856,7 @@ ul {
 }
 .four .topmenu > li {
   display: inline-block;
-  margin-right: 20px;
+  /*margin-right: 20px;*/
   position: relative;
 }
 .four .topmenu > li:last-child {
@@ -1851,7 +1867,7 @@ ul {
 
 
 .four ul {
-  background: #FFD7A7;
+  background: #ffffff;
   margin-bottom: 15px;
 }
 
@@ -1862,7 +1878,9 @@ ul {
   -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
-  background: #FFAB51;
+  background: #ffffff;
+    border: 0px solid gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .four ul li:hover .submenu {
   -webkit-transform: scaleY(1);
@@ -1870,8 +1888,13 @@ ul {
     transform: scaleY(1);
 }
 .four ul a {
-  color: #9B4222;
-  font-size: 16px;
+  color: #000;
+  font-size: 20px;
+}
+
+.four ul a i {
+  color: #00bff5;
+  font-size: 20px;
 }
 
 .topmenu > li:last-child {
@@ -1881,7 +1904,7 @@ ul {
   position: absolute;
   top: 100%;
   left: 0;
-  /*width: 100%;*/
+  width: 100%;
   z-index: 10;
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
@@ -1890,8 +1913,10 @@ ul {
 }
 .topmenu > li {
   display: inline-block;
-  margin-right: 20px;
+  /*margin-right: 20px;*/
   position: relative;
+  width: 32%;
+  text-align: center;
 }
 .topmenu > li:last-child {
   margin-right: 0;
@@ -1915,12 +1940,15 @@ ul {
 .section-img {
   float: left;
   width: 53%;
+  padding-right: 5px;
 }
 .section-content {
   float: right;
-  width: 47%;
+  width: 43%;
   color: black;
   text-align: center;
+  padding-left: 5px;
+
 }
 
 .section-content-name{
@@ -1941,3 +1969,13 @@ ul {
     background-color: #fcfafa;
     box-shadow: 0 0 0px rgba(0,0,0,0.5);
 }
+.section-content-text{
+    background-color: #c7f2f2;
+    height: 50%;
+}
+
+
+.btn-default{
+    margin-bottom: 10px
+}
+

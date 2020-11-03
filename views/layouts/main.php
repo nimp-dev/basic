@@ -204,7 +204,7 @@ PublicAsset::register($this);
     'header' => '<h2>Корзина</h2>',
     'id' => 'cart',
     'size'=> 'modal-lg',
-    'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+    'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button> <br>
         <a href="' . Url::to(['cart/view']) . '" class="btn btn-success">Оформить заказ</a>
         <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>'
 ]);

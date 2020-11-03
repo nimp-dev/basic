@@ -1,3 +1,3 @@
-<a href="<?= \yii\helpers\Url::to(['menu/viewcat', 'id' => $category['id']]) ?>">
+<a href="#<?=$category['name']?>">
 	<?= $category['name'] ?>
 </a>

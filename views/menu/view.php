@@ -23,7 +23,7 @@ use yii\widgets\LinkPager;
             </div>
         </div> -->
 
-<div class="main-content-view">
+<div class="main-content-<?=trim($info->style)?>">
     
         <div class="container">
             <!-- <div class="fixed-box">
@@ -47,9 +47,9 @@ use yii\widgets\LinkPager;
                 <div class="fixed-div">
                                 <nav class="four">
                                   <ul class="topmenu">
-                                    <li><a href="#">название <i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><?=$info->name?> <i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
                                     <li><a onclick="return getCart()" href="#">корзина <i class="fa fa-shopping-cart"></i></a></li>
-                                    <li><a>меню <i class="fas fa-angle-double-down" aria-hidden="true"></i></a>
+                                    <li><a>все меню <i style="color: #00bff5;" class="fas fa-angle-double-down" aria-hidden="true"></i></a>
                                       <ul class="submenu">
                                         <li><?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?></li>
                                       </ul>
@@ -80,7 +80,7 @@ use yii\widgets\LinkPager;
                         <?php if($value['id']!= 0) :?>
                                     <div class="row cat-border_prod">
                                         
-                                        <h1 style="text-align: center;"><?=$value['name']?></h1>
+                                        <h1 style="text-align: center; color: #777;"><a id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
 
                                                 <?php foreach ($value['product'] as $prod):?>
                                                     <div class="col-md-4">
@@ -91,13 +91,13 @@ use yii\widgets\LinkPager;
                                                             <?= Html::img("@web/public/images/products/{$prod['img']}",['alt'=>$prod['img']])?>
                                                               </div>  
                                                                 <div class="section-content">
-                                                                    <span class="section-content-name"><?=$prod['name']?></span>
-                                                                    <div>
-                                                                    <span class="section-content-text"><?=$prod['content']?></span>
-                                                                    </div>
-                                                                    <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$prod['id'] ]) ?>" data-id="<?= $prod['id'] ?>">
-                                                                    <i class="fa fa-shopping-cart"></i>by
-                                                                    </a>
+                                                                            <span class="section-content-name"><?=$prod['name']?></span><br>
+                                                                            <div  class="section-content-text">
+                                                                            <?=$prod['content']?>
+                                                                            </div>
+                                                                            <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$prod['id'] ]) ?>" data-id="<?= $prod['id'] ?>">
+                                                                            <i class="fa fa-shopping-cart"></i>by
+                                                                            </a>
                                                                 </div>
 
                                                         </div>
