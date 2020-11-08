@@ -31,5 +31,23 @@ class Cart extends ActiveRecord
         unset($_SESSION['cart'][$id]);
     } 
 
+    	public function pluse($id){
+
+        $qtyPluse = 1;
+        $sumPluse =$_SESSION['cart'][$id]['price'];
+        $_SESSION['cart'][$id]['qty'] += $qtyPluse;
+        $_SESSION['cart.sum'] += $sumPluse  ;
+    } 
+
+    	public function minus($id){
+
+        $qtyMinus = 1;
+        $sumMinus =$_SESSION['cart'][$id]['price'];
+        $_SESSION['cart'][$id]['qty'] -= $qtyMinus;
+        $_SESSION['cart.sum'] -= $sumMinus;
+        if($_SESSION['cart'][$id]['qty'] == 0){
+        	unset($_SESSION['cart'][$id]);
+        }
+    }
 
 }

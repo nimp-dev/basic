@@ -15,7 +15,11 @@ class MenuController extends AppController
         $res = [1 => 'Port Place (base_1)',
                 2 => 'Evropeysiy (base_2)'
                 ];
-        $this->setMeta('Portal');      
+        $this->setMeta('Portal');
+        // if(isset($_SESSION['cart'])){
+        //       echo 'alert(message successfully sent)';
+        //       return;
+        // }      
         return $this->render('index',['res'=>$res]);
     }
 
@@ -24,8 +28,8 @@ class MenuController extends AppController
         $session = Yii::$app->session;
         $session->open();
         $session->set('db',$id);
-        $menu = Menu::find()->with('product')->asArray()->all();
-        $products = Product::find();
+        $menu = Menu::find()->with('product')->orderBy(['id'=> SORT_ASC])->asArray()->all();
+        $products = Product::find()->orderBy(['id'=> SORT_ASC]);
         $info = Info::findOne(1);
         $this->setMeta('Portal |'. $info->name);
         return $this->render('view', ['menu'=>$menu,'products'=>$products,'info'=>$info]);
