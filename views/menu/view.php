@@ -80,23 +80,23 @@ use yii\widgets\LinkPager;
                         <?php if($value['id']!= 0) :?>
                                     <div class="row cat-border_prod">
                                         
-                                        <h1 style="text-align: center; color: #777;"><a id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
+                                        <h1 style="text-align: center; color: #777;"><a style="text-decoration: none;" id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
 
                                                 <?php foreach ($value['product'] as $prod):?>
                                                     <div class="col-md-4">
                                                         
                                                         <div class="prod-plate cat-border">    
 
-                                                              <div class="section-img">  
-                                                            <?= Html::img("@web/public/images/products/{$prod['img']}",['alt'=>$prod['img']])?>
+                                                              <div class="section-img ">  
+                                                            <?= Html::img("@web/public/images/products/{$prod['img']}",['alt'=>$prod['img'],'style' => 'width:149px;height: 149px'])?>
                                                               </div>  
                                                                 <div class="section-content">
-                                                                            <span class="section-content-name"><?=$prod['name']?></span><br>
+                                                                            <span class="section-content-name"><?=mb_strimwidth($prod['name'],0, 17)?></span><br>
                                                                             <div  class="section-content-text">
-                                                                            <?=$prod['content']?>
+                                                                            <?=mb_strimwidth($prod['content'],0, 45)?>
                                                                             </div>
                                                                             <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$prod['id'] ]) ?>" data-id="<?= $prod['id'] ?>">
-                                                                            <i class="fa fa-shopping-cart"></i>by
+                                                                            <i class="fa fa-shopping-cart"> </i><?php echo '&nbsp' ?><?= $prod['price']?> грн
                                                                             </a>
                                                                 </div>
 

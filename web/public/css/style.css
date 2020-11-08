@@ -1789,8 +1789,11 @@ padding-right:100px;
     background: #39b54a; /* Цвет фона */
     color: #fff; /* Цвет текста */
     width: 100%; /* Ширина слоя */
-   }
+   
 }
+
+
+
 
 .del-item{
     cursor: pointer;
@@ -1950,9 +1953,13 @@ ul {
   padding-left: 5px;
 
 }
+.section-content a {
+    text-decoration: none;
+}
 
 .section-content-name{
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .cat-border{
@@ -1968,6 +1975,7 @@ ul {
     margin:8px ;
     background-color: #fcfafa;
     box-shadow: 0 0 0px rgba(0,0,0,0.5);
+    text-decoration: none;
 }
 .section-content-text{
     background-color: #c7f2f2;

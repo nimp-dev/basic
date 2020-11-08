@@ -174,6 +174,41 @@ $(function(){
         });
     });
 
+
+        $('#cart .modal-body').on('click', '.pluse', function(){
+        var id = $(this).data('id');
+        $.ajax({
+            url: '/cart/pluse',
+            data: {id: id},
+            type: 'GET',
+            success: function(res){
+                if(!res) alert('Ошибка!');
+                showCart(res);
+            },
+            error: function(){
+                alert('Error!');
+            }
+        });
+    });
+
+
+        $('#cart .modal-body').on('click', '.minus', function(){
+        var id = $(this).data('id');
+        $.ajax({
+            url: '/cart/minus',
+            data: {id: id},
+            type: 'GET',
+            success: function(res){
+                if(!res) alert('Ошибка!');
+                showCart(res);
+            },
+            error: function(){
+                alert('Error!');
+            }
+        });
+    });
+
+
         function getCart(){
         $.ajax({
             url: '/cart/show',

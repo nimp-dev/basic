@@ -15,7 +15,11 @@ class MenuController extends AppController
         $res = [1 => 'Port Place (base_1)',
                 2 => 'Evropeysiy (base_2)'
                 ];
-        $this->setMeta('Portal');      
+        $this->setMeta('Portal');
+        if(isset($_SESSION['cart'])){
+              echo 'alert(message successfully sent)';
+              return;
+        }      
         return $this->render('index',['res'=>$res]);
     }
 

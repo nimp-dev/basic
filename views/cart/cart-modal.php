@@ -10,6 +10,7 @@ use yii\helpers\Html;
                     <th>Наимен</th>
                     <th>Кол-во</th>
                     <th>Цена</th>
+                    <th>total_p</th>
                     <th><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
                 </tr>
             </thead>
@@ -18,15 +19,18 @@ use yii\helpers\Html;
                 <tr>
                     <td><?= Html::img("@web/public/images/products/{$item['img']}", ['alt' => $item['name'], 'height' => 50, 'width'=> 50])?></td>
                     <td><?= $item['name']?></td>
-                    <td><?= $item['qty']?></td>
+                        <td><span data-id="<?= $id ?>" class="glyphicon glyphicon-minus text-danger minus" aria-hidden="true"></span>
+                            <?= $item['qty']?>
+                            <span data-id="<?= $id ?>" class="glyphicon glyphicon-plus text-danger pluse" aria-hidden="true"></span></td>
                     <td><?= $item['price']?></td>
+                    <td><?= $item['price']*$item['qty']?></td>
                     <td><span data-id="<?= $id ?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
                 </tr>
             <?php endforeach?>
-                <tr>
+<!--                 <tr>
                     <td colspan="4">Итого: </td>
                     <td><?= $session['cart.qty']?></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td colspan="4">На сумму: </td>
                     <td><?= $session['cart.sum']?></td>
