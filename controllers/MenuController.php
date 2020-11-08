@@ -16,10 +16,10 @@ class MenuController extends AppController
                 2 => 'Evropeysiy (base_2)'
                 ];
         $this->setMeta('Portal');
-        if(isset($_SESSION['cart'])){
-              echo 'alert(message successfully sent)';
-              return;
-        }      
+        // if(isset($_SESSION['cart'])){
+        //       echo 'alert(message successfully sent)';
+        //       return;
+        // }      
         return $this->render('index',['res'=>$res]);
     }
 
