@@ -1,15 +1,11 @@
 <?php
 
 
-require_once __DIR__ . '/../functions.php';
-
-$base = 'portal';
-
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => "pgsql:host=localhost;dbname='$base'",
-    'username' => 'postgres',
-    'password' => 'postgres',
+    'dsn' => 'mysql:host=localhost;dbname=portal',
+    'username' => 'ekonopka',
+    'password' => '36369367',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)

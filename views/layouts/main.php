@@ -54,7 +54,11 @@ PublicAsset::register($this);
                 </ul>
                 <div class="i_con">
                     <ul class="nav navbar-nav text-uppercase">
-                        <li><a href="#">Login</a></li>
+                        <?php if(!Yii::$app->user->isGuest): ?>
+
+                        <li><a href="<?= Url::to(['/site/logout']) ?>"><?= Yii::$app->user->identity['username'] ?> (Выход) </a></li>
+                        <?php endif;?>
+                        <li><a href="<?=Url::to(['/admin'])?>">Login</a></li>
                         <li><a href="#">Register</a></li>
                     </ul>
                 </div>
@@ -179,8 +183,8 @@ PublicAsset::register($this);
                             <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
                         </div>
                         <div>
-                            <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                            <span class="p-date">February 15, 2016</span>
+                            <a href="<?=Url::to(['/admin'])?>" class="text-uppercase">Login</a>
+                            <span href="#" class="p-date">Register</span>
                         </div>
                     </div>
                 </aside>

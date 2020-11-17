@@ -60,7 +60,7 @@ use yii\widgets\LinkPager;
                 </div>
             </div>
 
-
+                            <!-- зачем? -->
                         <div class="wrapper">
                             <div class="menu">
                             <nav class="menu-list">
@@ -69,6 +69,7 @@ use yii\widgets\LinkPager;
                             </nav>
                             </div>
                         </div>
+                            <!-- зачем? -->
 
             <div class="row">
                     <!--  -->
@@ -80,13 +81,12 @@ use yii\widgets\LinkPager;
                                     <div class="row cat-border_prod">
                                         
                                         <h1 style="text-align: center; color: #777;"><a style="text-decoration: none;" id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
-
                                                 <?php foreach ($value['product'] as $prod):?>
                                                     <div class="col-md-4">
                                                         
                                                         <div class="prod-plate cat-border">    
 
-                                                              <div class="section-img ">  
+                                                              <div class="section-img">  
                                                             <?= Html::img("@web/public/images/products/{$prod['img']}",['alt'=>$prod['img'],'style' => 'width:149px;height: 149px'])?>
                                                               </div>  
                                                                 <div class="section-content">

@@ -15,11 +15,11 @@ class MenuController extends AppController
         $res = [1 => 'Port Place (base_1)',
                 2 => 'Evropeysiy (base_2)'
                 ];
+        $id = Yii::$app->request->get('id');        
         $this->setMeta('Portal');
-        // if(isset($_SESSION['cart'])){
-        //       echo 'alert(message successfully sent)';
-        //       return;
-        // }      
+         // if(isset($_SESSION['cart'] & $_SESSION['cart.db'] !== $id )){
+         // return $this->render('aler');
+         // }      
         return $this->render('index',['res'=>$res]);
     }
 
@@ -35,7 +35,7 @@ class MenuController extends AppController
         return $this->render('view', ['menu'=>$menu,'products'=>$products,'info'=>$info]);
 
     }
-
+              //не используеться {
     	public function actionViewcat($id)
     	{	$info = Info::findOne(1);
     		if(!$id == 0){
@@ -52,4 +52,4 @@ class MenuController extends AppController
 
     		return $this->render('viewcat',['catproduct'=>$catproduct,'info'=>$info,'category'=>$category,'pages'=>$pages]);
     	}
-}
+}           // } не используеться 

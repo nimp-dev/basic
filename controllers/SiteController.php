@@ -9,10 +9,6 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\Res;
-use app\models\Menu;
-use app\models\Product;
-use yii\helpers\ArrayHelper;
 
 class SiteController extends Controller
 {
@@ -36,7 +32,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['post','get'],
                 ],
             ],
         ];
@@ -58,16 +54,15 @@ class SiteController extends Controller
         ];
     }
 
-
-
-         public function actionPinfo($id)
-     { 
-        $info = Product::find()->with('menu')->where(['category_id'=> $id])->all();
-        return $this->render('pinfo',['info'=>$info]);
-
-     }       
-
-
+    /**
+     * Displays homepage.
+     *
+     * @return string
+     */
+    public function actionIndex()
+    {
+        return $this->render('index');
+    }
 
     /**
      * Login action.
@@ -130,18 +125,4 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    // other
-    public function actionSingle()
-    {
-        return $this->render('single');
-    }
-        public function actionCategory()
-    {
-        return $this->render('category');
-    }
-            public function actionStart()
-    {
-        return $this->render('start');
-    }
-
 }
