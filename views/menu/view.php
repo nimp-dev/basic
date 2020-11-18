@@ -82,6 +82,7 @@ use yii\widgets\LinkPager;
                                         
                                         <h1 style="text-align: center; color: #777;"><a style="text-decoration: none;" id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
                                                 <?php foreach ($value['product'] as $prod):?>
+                                                    
                                                     <div class="col-md-4">
                                                         
                                                         <div class="prod-plate cat-border">    

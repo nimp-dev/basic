@@ -7,6 +7,15 @@ use Yii;
 
 class Menu extends ActiveRecord{
 
+      public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
+    }
+
 
 	public static function primaryKey()
       {

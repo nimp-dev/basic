@@ -85,7 +85,7 @@ class Product extends \yii\db\ActiveRecord
 
     public function upload(){
         if($this->validate()){
-            $path = 'upload/store/' . $this->image->baseName . '.' . $this->image->extension;
+            $path = 'public/upload/store/' . $this->image->baseName . '.' . $this->image->extension;
             $this->image->saveAs($path);
             $this->attachImage($path, true);
             @unlink($path);
@@ -98,7 +98,7 @@ class Product extends \yii\db\ActiveRecord
     public function uploadGallery(){
         if($this->validate()){
             foreach($this->gallery as $file){
-                $path = 'upload/store/' . $file->baseName . '.' . $file->extension;
+                $path = 'public/upload/store/' . $file->baseName . '.' . $file->extension;
                 $file->saveAs($path);
                 $this->attachImage($path);
                 @unlink($path);
