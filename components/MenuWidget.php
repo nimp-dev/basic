@@ -21,13 +21,32 @@ class MenuWidget extends Widget{
 		$this->tpl .='.php';
 	}
 
-	public function run(){
-		$this->data = Menu::find()->indexBy('id')->asArray()->all();
-		$this->tree = $this->getTree();
-		$this->menuHtml = $this->getMenuHtml($this->tree);
-		return $this->menuHtml;
-	}
+	// public function run(){
+	// 	$this->data = Menu::find()->indexBy('id')->asArray()->all();
+	// 	$this->tree = $this->getTree();
+	// 	$this->menuHtml = $this->getMenuHtml($this->tree);
+	// 	return $this->menuHtml;
+	// }
+//
 
+    public function run(){
+        // get cache
+        if($this->tpl == 'select.php'){
+            $menu = Yii::$app->cache->get('select');
+            if($menu) return $menu;
+        }
+
+        $this->data = Menu::find()->indexBy('id')->asArray()->all();
+        $this->tree = $this->getTree();
+        $this->menuHtml = $this->getMenuHtml($this->tree);
+        // set cache
+        if($this->tpl == 'select.php'){
+            Yii::$app->cache->set('select', $this->menuHtml, 60);
+        }
+        return $this->menuHtml;
+    } 
+
+	// 
 	protected function getTree(){
     $tree = [];
     foreach ($this->data as $id=>&$node) {
