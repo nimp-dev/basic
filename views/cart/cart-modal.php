@@ -17,7 +17,7 @@ use yii\helpers\Html;
             <tbody>
             <?php foreach($session['cart'] as $id => $item):?>
                 <tr>
-                    <td><?= Html::img("@web/public/images/products/{$item['img']}", ['alt' => $item['name'], 'height' => 50, 'width'=> 50])?></td>
+                    <td><?= Html::img($item['img'], ['alt' => $item['name'], 'height' => 50, 'width'=> 50])?></td>
                     <td><?= $item['name']?></td>
                         <td><span data-id="<?= $id ?>" class="glyphicon glyphicon-minus text-danger minus" aria-hidden="true"></span>
                             <?= $item['qty']?>

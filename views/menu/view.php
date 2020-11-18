@@ -81,14 +81,14 @@ use yii\widgets\LinkPager;
                                     <div class="row cat-border_prod">
                                         
                                         <h1 style="text-align: center; color: #777;"><a style="text-decoration: none;" id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
-                                                <?php foreach ($value['product'] as $prod):?>
-                                                    
+                                                <?php foreach ($value->product as $prod):?>
+                                                    <?php $mainImg = $prod->getImage(); ?>
                                                     <div class="col-md-4">
                                                         
                                                         <div class="prod-plate cat-border">    
 
                                                               <div class="section-img">  
-                                                            <?= Html::img("@web/public/images/products/{$prod['img']}",['alt'=>$prod['img'],'style' => 'width:149px;height: 149px'])?>
+                                                            <?= Html::img($mainImg->getUrl(),['alt'=>$prod['img'],'style' => 'width:149px;height: 149px'])?>
                                                               </div>  
                                                                 <div class="section-content">
                                                                             <span class="section-content-name"><?=mb_strimwidth($prod['name'],0, 17)?></span><br>
