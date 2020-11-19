@@ -12,10 +12,10 @@ class MenuController extends AppController
 	
     public function actionIndex()
     {
-        $res = [1 => 'Port Place (base_1)',
-                2 => 'Evropeysiy (base_2)'
+        $res = ['port_place' => 'Port Place',
+                'silver' => 'silver'
                 ];
-        $id = Yii::$app->request->get('id');        
+        // $id = Yii::$app->request->get('id');        
         $this->setMeta('Portal');
          // if(isset($_SESSION['cart'] & $_SESSION['cart.db'] !== $id )){
          // return $this->render('aler');

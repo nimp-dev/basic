@@ -63,10 +63,10 @@ class Order extends ActiveRecord{
     {
       $base = Yii::$app->session['db'];
                 
-        if($base=='1')
-            return Yii::$app->get('db');
-        if($base=='2')
-            return Yii::$app->get('portal_2');
+        if($base=='port_place')
+            return Yii::$app->get('port_place');
+        if($base=='silver')
+            return Yii::$app->get('silver');;
     }
     
 

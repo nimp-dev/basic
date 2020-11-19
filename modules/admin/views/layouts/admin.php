@@ -95,7 +95,7 @@ PublicAsset::register($this);
                                         </li>     
                                   </ul>
                                 </nav>
-<a href="http://basic/menu/1">просмотр страницы</a>
+<!-- <a href="<?=\yii\helpers\Url::to(['menu/view']) ?>">просмотр страницы</a> -->
 
         <?php if( Yii::$app->session->hasFlash('success') ): ?>
             <div class="alert alert-success alert-dismissible" role="alert">

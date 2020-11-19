@@ -12,7 +12,7 @@ use yii\helpers\Url
                     <div class="row">
                         <div class="col-md-6">
                             <div class="post-thumb" style="background-color: black">
-                            	<?php if($key==1){
+                            	<?php if($key=='port_place'){
                                 echo '<a href="blog.html"><img src="/public/images/PORTPLACE.png" alt="" class="pull-left"></a>';
                             	}else{
                             	echo '<a href="blog.html"><img src="/public/images/blog-grid.jpg" alt="" class="pull-left"></a>';	
