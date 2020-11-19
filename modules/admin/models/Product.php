@@ -108,4 +108,14 @@ class Product extends \yii\db\ActiveRecord
             return false;
         }
     }
+
+              public static function getDb()
+    {
+        $base = Yii::$app->session['db'];
+                
+        if($base=='port_place')
+            return Yii::$app->get('port_place');
+        if($base=='silver')
+            return Yii::$app->get('silver');
+    }
 }

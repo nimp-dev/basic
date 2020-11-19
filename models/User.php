@@ -2,6 +2,7 @@
 
 namespace app\models;
 use yii\db\ActiveRecord;
+use Yii;
 
 class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
@@ -74,5 +75,15 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
 
     public function generateAuthKey(){
         $this->auth_key = \Yii::$app->security->generateRandomString();
+    }
+
+    public static function getDb()
+    {
+        $base = Yii::$app->session['db'];
+                
+        if($base=='port_place')
+            return Yii::$app->get('port_place');
+        if($base=='silver')
+            return Yii::$app->get('silver');
     }
 }

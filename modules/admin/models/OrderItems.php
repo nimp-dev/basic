@@ -57,4 +57,14 @@ class OrderItems extends \yii\db\ActiveRecord
             'sum_item' => 'Sum Item',
         ];
     }
+
+              public static function getDb()
+    {
+        $base = Yii::$app->session['db'];
+                
+        if($base=='port_place')
+            return Yii::$app->get('port_place');
+        if($base=='silver')
+            return Yii::$app->get('silver');
+    }
 }

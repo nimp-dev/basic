@@ -61,7 +61,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+
+                $admin_res = ['port_place' => 'Port Place',
+                'silver' => 'silver'
+                ];
+        // $id = Yii::$app->request->get('id');        
+         // if(isset($_SESSION['cart'] & $_SESSION['cart.db'] !== $id )){
+         // return $this->render('aler');
+         // }      
+        return $this->render('index',['admin_res'=>$admin_res]);
     }
 
     /**

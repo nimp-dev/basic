@@ -7,7 +7,7 @@ use yii\helpers\Url
         <div class="row">
             <div class="col-md-12">
 
-<?php foreach($res as $key => $value): ?>
+<?php foreach($admin_res as $key => $value): ?>
                 <article class="post post-list">
                     <div class="row">
                         <div class="col-md-6">
@@ -29,7 +29,7 @@ use yii\helpers\Url
                                     <h1 class="entry-title"><a href="<?= Url::to(['site/view','id'=>$key]) ?>"><?= $value ?></a></h1>
                                 </header>
                                 <div class="entry-content">
-                                    <p>ТОП бургеры каменского текст текст текст текст текст текст текст текст ТОП бургеры каменского
+                                    <p>adminka
                                     </p>
                                 </div>
                                 <div class="social-share">

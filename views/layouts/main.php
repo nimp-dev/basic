@@ -183,7 +183,7 @@ PublicAsset::register($this);
                             <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
                         </div>
                         <div>
-                            <a href="<?=Url::to(['/admin'])?>" class="text-uppercase">Login</a>
+                            <a href="<?=Url::to(['site/index'])?>" class="text-uppercase">Login</a>
                             <span href="#" class="p-date">Register</span>
                         </div>
                     </div>
