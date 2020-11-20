@@ -1982,6 +1982,10 @@ ul {
     height: 50%;
 }
 
+.section-content-text p {
+    line-height: 1.2em;
+    font-size: 12px;
+}
 
 .btn-default{
     margin-bottom: 10px

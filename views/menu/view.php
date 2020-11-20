@@ -91,9 +91,9 @@ use yii\widgets\LinkPager;
                                                             <?= Html::img($mainImg->getUrl(),['alt'=>$prod['img'],'style' => 'width:149px;height: 149px'])?>
                                                               </div>  
                                                                 <div class="section-content">
-                                                                            <span class="section-content-name"><?=mb_strimwidth($prod['name'],0, 17)?></span><br>
+                                                                            <span class="section-content-name"><?=mb_strimwidth($prod['name'],0, 16)?></span><br>
                                                                             <div  class="section-content-text">
-                                                                            <?=mb_strimwidth($prod['content'],0, 45)?>
+                                                                            <p><?=mb_strimwidth($prod['content'],0, 45)?></p>
                                                                             </div>
                                                                             <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$prod['id'] ]) ?>" data-id="<?= $prod['id'] ?>">
                                                                             <i class="fa fa-shopping-cart"> </i><?php echo '&nbsp' ?><?= $prod['price']?> грн
