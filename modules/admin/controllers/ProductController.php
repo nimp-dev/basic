@@ -67,6 +67,15 @@ class ProductController extends Controller
         $model = new Product();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if( $model->image ){
+                $model->upload();
+            }
+            unset($model->image);
+            $model->gallery = UploadedFile::getInstances($model, 'gallery');
+            $model->uploadGallery();
+
             Yii::$app->session->setFlash('success', "Товар {$model->name} добавлен");
             return $this->redirect(['view', 'id' => $model->id]);
         } else {

@@ -10,6 +10,7 @@ $this->title = 'Orders';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-index">
+ <?php   header("refresh: 15;"); ?>
 
     <h1><?= Html::encode($this->title) ?></h1>
 

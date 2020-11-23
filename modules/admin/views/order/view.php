@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Orders', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="order-view">
-
+ 
     <h1>Просмотр заказа №<?= $model->id ?></h1>
 
     <p>

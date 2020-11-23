@@ -27,9 +27,10 @@ mihaildev\elfinder\Assets::noConflict($this);
     <?php
     ?>
     <?php
-    echo $form->field($model, 'content')->widget(CKEditor::className(), [
-        'editorOptions' => ElFinder::ckeditorOptions('elfinder', [])
-    ]);
+    // echo $form->field($model, 'content')->widget(CKEditor::className(), [
+    //     'editorOptions' => ElFinder::ckeditorOptions('elfinder', [])
+    // ]);
+      echo $form->field($model, 'content')->textInput()
     ?>
 
     <?= $form->field($model, 'price')->textInput() ?>

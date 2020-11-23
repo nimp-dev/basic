@@ -16,7 +16,7 @@ class LoginForm extends Model
     public $username;
     public $password;
     public $rememberMe = true;
-
+    // public $admin_db;
     private $_user = false;
 
 

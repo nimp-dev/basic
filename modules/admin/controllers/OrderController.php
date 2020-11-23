@@ -41,7 +41,7 @@ class OrderController extends AppAdminController
             ],
             'sort' => [
                 'defaultOrder' => [
-                    'status' => SORT_ASC
+                    'id' => SORT_DESC
                 ]
             ],
         ]);

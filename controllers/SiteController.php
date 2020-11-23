@@ -98,6 +98,16 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
+    // public function actionGetidbase($id){
+    //     // $session->remove('admin_db');
+    //     $session = Yii::$app->session;
+    //     $session->open();
+    //     $session->remove('admin_db');
+    //     $session->set('admin_db',$id);
+    // }
+
+
+
     /**
      * Displays contact page.
      *

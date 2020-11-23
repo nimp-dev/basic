@@ -31,10 +31,10 @@ class MenuWidget extends Widget{
 
     public function run(){
         // get cache
-        if($this->tpl == 'select.php'){
-            $menu = Yii::$app->cache->get('select');
-            if($menu) return $menu;
-        }
+        // if($this->tpl == 'select.php'){
+        //     $menu = Yii::$app->cache->get('select');
+        //     if($menu) return $menu;
+        // }
 
         $this->data = Menu::find()->indexBy('id')->asArray()->all();
         $this->tree = $this->getTree();

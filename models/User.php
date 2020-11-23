@@ -79,6 +79,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
 
     public static function getDb()
     {
+        //or admin_db
         $base = Yii::$app->session['db'];
                 
         if($base=='port_place')
