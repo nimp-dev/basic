@@ -31,6 +31,7 @@ use yii\helpers\Html;
                 <tr>
                     <td colspan="4">На сумму: </td>
                     <td><?= $session['cart.sum']?></td>
+                    <!-- <td><?= $session['cart.qty']?></td> -->
                 </tr>
             </tbody>
         </table>

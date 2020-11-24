@@ -45,6 +45,7 @@ class Cart extends ActiveRecord
         $sumPluse =$_SESSION['cart'][$id]['price'];
         $_SESSION['cart'][$id]['qty'] += $qtyPluse;
         $_SESSION['cart.sum'] += $sumPluse  ;
+        // $_SESSION['cart.qty'] += 1;
     } 
 
     	public function minus($id){
