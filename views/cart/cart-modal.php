@@ -10,7 +10,7 @@ use yii\helpers\Html;
                     <th>Наимен</th>
                     <th>Кол-во</th>
                     <th>Цена</th>
-                    <th>total_p</th>
+                    <th>Сумма</th>
                     <th><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
                 </tr>
             </thead>
@@ -27,11 +27,9 @@ use yii\helpers\Html;
                     <td><span data-id="<?= $id ?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
                 </tr>
             <?php endforeach?>
-
-                <tr>
-                    <td colspan="4">На сумму: </td>
-                    <td><?= $session['cart.sum']?></td>
-                    <!-- <td><?= $session['cart.qty']?></td> -->
+                <tr  style="font-weight: bold;">
+                    <td colspan="4">Игото: </td>
+                    <td><?= $session['cart.sum']?> грн</td>
                 </tr>
             </tbody>
         </table>

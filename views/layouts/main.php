@@ -69,8 +69,14 @@ PublicAsset::register($this);
     </div>
     <!-- /.container-fluid -->
 </nav>
-
-
+<?php
+//вторую проверку можна убрать может помешать на хостинге
+if(isset($_SESSION['cart.name'])){
+    if(($_SESSION['cart.name'])!==($_SESSION['db']) & Yii::$app->request->url != '/'){ 
+         echo "<script type='text/javascript'>alert('В корзине имеються продукты другого продавца');</script>";
+    }
+}
+?> 
 <!--main content start-->
 <?=$content?>
 <!-- end main content-->
@@ -203,6 +209,7 @@ PublicAsset::register($this);
         </div>
     </div>
 </footer>
+
 <?php
 \yii\bootstrap\Modal::begin([
     'header' => '<h2>Корзина</h2>',
