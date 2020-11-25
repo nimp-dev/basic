@@ -11,6 +11,7 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\PublicAsset;
 use yii\helpers\Url;
+ use yii\bootstrap\Modal;
 
 PublicAsset::register($this);
 ?>
@@ -73,7 +74,9 @@ PublicAsset::register($this);
 //вторую проверку можна убрать может помешать на хостинге
 if(isset($_SESSION['cart.name'])){
     if(($_SESSION['cart.name'])!==($_SESSION['db']) & Yii::$app->request->url != '/'){ 
-         echo "<script type='text/javascript'>alert('В корзине имеються продукты другого продавца');</script>";
+         echo "<script type='text/javascript'>alert(' asd ');</script>";
+        // return getCart();
+      // return Yii::$app->request
     }
 }
 ?> 
