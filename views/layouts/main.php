@@ -11,7 +11,6 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\PublicAsset;
 use yii\helpers\Url;
- use yii\bootstrap\Modal;
 
 PublicAsset::register($this);
 ?>
@@ -70,16 +69,48 @@ PublicAsset::register($this);
     </div>
     <!-- /.container-fluid -->
 </nav>
-<?php
-//вторую проверку можна убрать может помешать на хостинге
-if(isset($_SESSION['cart.name'])){
-    if(($_SESSION['cart.name'])!==($_SESSION['db']) & Yii::$app->request->url != '/'){ 
-         echo "<script type='text/javascript'>alert(' asd ');</script>";
-        // return getCart();
-      // return Yii::$app->request
-    }
-}
-?> 
+
+
+            <div id="myModalBox" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!-- Заголовок модального окна -->
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">В корзине находятся продукты другого заведения</h4>
+                  </div>
+                  <!-- Основное содержимое модального окна -->
+                  <div class="modal-body">
+                    <p>в одном заказе должны содержаться продукты только одного заведния</p>
+                    <p>если необходимо заказать еще что-то у другого продавца, сормируйте еще один заказ, после того как оформили прошлый</p>
+                  </div>
+                  <!-- Футер модального окна -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="return delCart()" data-dismiss="modal">Очистить корзину</button>
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button> -->
+                        <?php if(isset($_SESSION['cart.name'])) :?>
+                            <button type="button" class="btn btn-default"><a style="text-decoration: none;" href="<?= Url::to(['menu/view','id'=>$_SESSION['cart.name']]) ?>">вернуться к <?=$_SESSION['cart.name']?></a></button>
+                        <?php endif;?>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+<?php if(isset($_SESSION['cart.name'])) :?>
+    <?php if(($_SESSION['cart.name'])!==($_SESSION['db']) & Yii::$app->request->url != '/') :?>
+            
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                $("#myModalBox").modal('show');
+                            });
+                        </script>
+    <?php endif;?>
+<?php endif;?>
+
+
+
 <!--main content start-->
 <?=$content?>
 <!-- end main content-->

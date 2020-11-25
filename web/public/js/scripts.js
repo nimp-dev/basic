@@ -234,6 +234,15 @@ $(function(){
         });
     }
 
+    function delCart(){
+        $.ajax({
+            url: '/cart/del',
+            type: 'GET'
+        });
+    }
+
+
+
      $('.add-to-cart').on('click', function (e) {
         e.preventDefault();
         var id = $(this).data('id'),
