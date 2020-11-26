@@ -6,20 +6,25 @@ use app\models\Menu;
 use app\models\Product;
 use app\models\Info;
 use yii\data\Pagination;
+use app\models\Res;
 
 class MenuController extends AppController
 {
 	
     public function actionIndex()
     {
-        $res = ['port_place' => 'Port Place',
-                'silver' => 'silver'
-                ];
+        // $res = ['port_place' => 'Port Place',
+        //         'silver' => 'silver'
+        //         ];
+        if(Yii::$app->request->url == '/'){
+        $session = Yii::$app->session;
+        $session->open();
+        $session->set('db','portal_food');
+        $res = Res::find()->all();
+        }
         // $id = Yii::$app->request->get('id');        
         $this->setMeta('Portal');
-         // if(isset($_SESSION['cart'] & $_SESSION['cart.db'] !== $id )){
-         // return $this->render('aler');
-         // }      
+     
         return $this->render('index',['res'=>$res]);
     }
 

@@ -2,7 +2,7 @@
 
 namespace app\models;
 use yii\db\ActiveRecord;
-
+use Yii;
 
 class Res extends ActiveRecord{
 
@@ -16,4 +16,8 @@ class Res extends ActiveRecord{
 		return 'res';
 	}
 
+    public static function getDb()
+    {
+        return Yii::$app->getDb('db');
+    }
 }
