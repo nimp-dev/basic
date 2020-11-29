@@ -13,6 +13,10 @@ class MenuController extends AppController
 	
     public function actionIndex()
     {
+        if (!Yii::$app->user->isGuest) {
+             return $this->redirect(['/admin']);
+        }
+        else{
         // $res = ['port_place' => 'Port Place',
         //         'silver' => 'silver'
         //         ];
@@ -26,6 +30,7 @@ class MenuController extends AppController
         $this->setMeta('Portal');
      
         return $this->render('index',['res'=>$res]);
+        }
     }
 
             public function actionView($id)

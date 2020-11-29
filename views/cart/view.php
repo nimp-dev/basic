@@ -62,7 +62,6 @@ use yii\helpers\Url;
     		
         <?php $form = ActiveForm::begin()?>
         <?= $form->field($order, 'name')?>
-        <?= $form->field($order, 'email')?>
         <?= $form->field($order, 'phone')?>
         <?= $form->field($order, 'address')?>
         <?= Html::submitButton('Заказать', ['class' => 'btn btn-success'])?>

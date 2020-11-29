@@ -93,6 +93,9 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+        $session = Yii::$app->session;
+        $session->open();
+        $session->set('db','portal_food');
         Yii::$app->user->logout();
 
         return $this->goHome();

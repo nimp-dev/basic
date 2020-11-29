@@ -1,3 +1,3 @@
-<a href="#<?=$category['name']?>">
+<a class="b-b-default" href="#<?=$category['name']?>">
 	<?= $category['name'] ?>
 </a>

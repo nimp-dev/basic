@@ -35,12 +35,12 @@ class Order extends ActiveRecord{
     public function rules()
     {
         return [
-            [['name', 'email', 'phone', 'address'], 'required'],
+            [['name', 'phone', 'address'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
             [['qty'], 'integer'],
             [['sum'], 'number'],
             [['status'], 'boolean'],
-            [['name', 'email', 'phone', 'address'], 'string', 'max' => 255],
+            [['name', 'phone', 'address'], 'string', 'max' => 255],
         ];
     }
 
@@ -48,7 +48,6 @@ class Order extends ActiveRecord{
     {
         return [
             'name' => 'Имя',
-            'email' => 'E-mail',
             'phone' => 'Телефон',
             'address' => 'Адрес',
         ];
