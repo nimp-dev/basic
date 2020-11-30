@@ -32,7 +32,7 @@ mihaildev\elfinder\Assets::noConflict($this);
     // ]);
       echo $form->field($model, 'content')->textInput()
     ?>
-
+    <?= $form->field($model, 'weight')->textInput() ?>
     <?= $form->field($model, 'price')->textInput() ?>
 
     <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>

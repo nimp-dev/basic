@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'category_id',
             'name',
+            'weight',
             'content:html',
             'price',
             'keywords',
@@ -40,9 +41,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => "<img src='{$img->getUrl()}'>",
                 'format' => 'html',
             ],
-            'hit',
-            'new',
-            'sale',
         ],
     ]) ?>
 

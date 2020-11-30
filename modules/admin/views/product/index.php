@@ -46,13 +46,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'format' => 'html',
             ],
-            [
-                'attribute' => 'sale',
-                'value' => function($data){
-                    return !$data->sale ? '<span class="text-danger">Нет</span>' : '<span class="text-success">Да</span>';
-                },
-                'format' => 'html',
-            ],
             // 'keywords',
             // 'description',
             // 'img',

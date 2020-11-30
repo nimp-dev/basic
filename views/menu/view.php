@@ -74,47 +74,40 @@ use yii\widgets\LinkPager;
             <div class="row">
                     <!--  -->
                 <div class="col-md-12">
-
-                    <?php foreach ($menu as $value) :?>
-
-                        <?php if($value['id']!= 0) :?>
-                                    <div class="row cat-border_prod">
-                                        
-                                        <h1><a id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
-                                                <?php foreach ($value->product as $prod):?>
-                                                    <?php $mainImg = $prod->getImage(); ?>
-                                                    <div class="col-md-4">
-                                                        
-                                                        <div class="prod-plate cat-border">    
-
-                                                              <div class="section-img">  
-                                                            <?= Html::img($mainImg->getUrl(),['alt'=>$prod['img'],'style' => 'width:149px;height: 149px'])?>
-                                                                <div class="prod-size"> asd</div> 
-                                                              </div> 
-                                                                <div class="section-content">
-                                                                            <span class="section-content-name"><?=mb_strimwidth($prod['name'],0, 16)?></span>
-                                                                            <div  class="section-content-text">
-                                                                            <p><?=mb_strimwidth($prod['content'],0, 70)?></p>
-                                                                            </div>
-                                                                            <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$prod['id'] ]) ?>" data-id="<?= $prod['id'] ?>">
-                                                                            <i class="fa fa-shopping-cart"> </i><?php echo '&nbsp' ?><?= $prod['price']?> грн
-                                                                            </a>
-                                                                </div>
-
+<?php foreach ($menu as $value) :?>
+    <?php if($value['id']!= 0) :?> 
+        <div class="row cat-border_prod">
+        <h1><a id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
+            <?php foreach ($value->product as $prod):?>
+                <?php $mainImg = $prod->getImage(); ?>               
+                                                <div class="col-md-4">
+                                                    <div class="blog-card blog-card-blog">
+                                                        <div class="blog-card-image">
+                                                            <a href="#"> <?= Html::img($mainImg->getUrl(),['alt'=>$prod['img'],'style' => 'width:350px;height: 218px'])?> </a>
+                                                            <div class="ripple-cont"></div>
                                                         </div>
-
+                                                        <div class="blog-table">
+                                                            <h6 class="blog-category blog-text-success"><i class="fas fa-blog"></i><?=$prod['weight']?>г</h6>
+                                                            <h4 class="blog-card-caption">
+                                                                <a href="#"><?=mb_strimwidth($prod['name'],0, 16)?></a>
+                                                            </h4>
+                                                            <p class="blog-card-description"><?=mb_strimwidth($prod['content'],0, 70)?></p>
+                                                            <div class="ftr">
+                                                                <div class="author">
+                                                                    <a href="#"> <img src="/public/images/<?=$info->logo?>" alt="..." class="avatar img-raised"> <span><?= $info->name?></span> </a>
+                                                                </div>
+                                                                <div class="stats"> <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$prod['id'] ]) ?>" data-id="<?= $prod['id'] ?>">
+                                                                            <i class="fa fa-shopping-cart"> </i><?php echo '&nbsp' ?><?= $prod['price']?> грн</a></div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                <?php endforeach ;?>
-
-
-                                    </div>
-                        <div class="clearfix"></div>
-                        <?php endif ;?>
-                        
-                        
-                    <?php endforeach ;?>            
-                </div>
-                   
+                                                </div>
+        <?php endforeach ;?>
+        <div class="clearfix"></div>
+    <?php endif ;?>
+    </div> 
+<?php endforeach ;?>  
+                </div> 
             </div>
         </div>
     

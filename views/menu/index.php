@@ -17,7 +17,7 @@ $ctime = date('H:i:s');
                             <div class="col-sm-4 bg-c-lite-green user-profile">
                                 <a href="<?= Url::to(['menu/view','id'=>$ress->id_res]) ?>">
                                 <div class="card-block text-center text-white">
-                                    <div class="m-b-25"> <img src="/public/images/blog-grid.jpg" class="img-radius" alt="User-Profile-Image"> </div>
+                                    <div class="m-b-25"> <img src="/public/images/<?= $ress->logo?>" class="img-radius" alt="User-Profile-Image"> </div>
                                     <h6 class="f-w-600"><a href="<?= Url::to(['menu/view','id'=>$ress->id_res]) ?>"><?= $ress->name?></a></h6>
                                 </div>
                                 </a>

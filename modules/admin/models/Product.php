@@ -56,7 +56,7 @@ class Product extends \yii\db\ActiveRecord
             [['category_id'], 'integer'],
             [['content', 'hit', 'new', 'sale'], 'string'],
             [['price'], 'number'],
-            [['name', 'keywords', 'description', 'img'], 'string', 'max' => 255],
+            [['name', 'keywords', 'description', 'img','weight'], 'string', 'max' => 255],
             [['image'], 'file', 'extensions' => 'png, jpg'],
             [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4],
         ];
@@ -76,6 +76,7 @@ class Product extends \yii\db\ActiveRecord
             'keywords' => 'Ключевые слова',
             'description' => 'Мета-описание',
             'image' => 'Фото',
+            'weight'=>'Вес',
             'gallery' => 'Галерея',
             'hit' => 'Хит',
             'new' => 'Новинка',
