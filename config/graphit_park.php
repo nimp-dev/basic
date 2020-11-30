@@ -3,7 +3,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=silver',
+    'dsn' => 'mysql:host=localhost;dbname=graphit_park',
     'username' => 'ekonopka',
     'password' => '36369367',
     'charset' => 'utf8',

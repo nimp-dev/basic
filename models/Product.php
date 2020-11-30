@@ -35,8 +35,8 @@ class Product extends ActiveRecord{
                 
         if($base=='port_place')
             return Yii::$app->get('port_place');
-        if($base=='silver')
-            return Yii::$app->get('silver');
+        if($base=='graphit_park')
+            return Yii::$app->get('graphit_park');
     }
     
 

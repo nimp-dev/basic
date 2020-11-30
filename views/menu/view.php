@@ -91,10 +91,10 @@ use yii\widgets\LinkPager;
                                                             <h4 class="blog-card-caption">
                                                                 <a href="#"><?=mb_strimwidth($prod['name'],0, 16)?></a>
                                                             </h4>
-                                                            <p class="blog-card-description"><?=mb_strimwidth($prod['content'],0, 70)?></p>
+                                                            <p class="blog-card-description"><?=mb_strimwidth($prod['content'],0, 100)?></p>
                                                             <div class="ftr">
                                                                 <div class="author">
-                                                                    <a href="#"> <img src="/public/images/<?=$info->logo?>" alt="..." class="avatar img-raised"> <span><?= $info->name?></span> </a>
+                                                                    <a> <img src="/public/images/<?=$info->logo?>" alt="..." class="avatar img-raised"> <span><?= $info->name?></span> </a>
                                                                 </div>
                                                                 <div class="stats"> <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$prod['id'] ]) ?>" data-id="<?= $prod['id'] ?>">
                                                                             <i class="fa fa-shopping-cart"> </i><?php echo '&nbsp' ?><?= $prod['price']?> грн</a></div>

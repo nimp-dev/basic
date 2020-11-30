@@ -72,9 +72,8 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        'portal_2' => require(__DIR__ . '/portal_2.php'),
         'port_place' => require(__DIR__ . '/port_place.php'),
-        'silver' => require(__DIR__ . '/silver.php'),
+        'graphit_park' => require(__DIR__ . '/graphit_park.php'),
         
         'urlManager' => [
             'enablePrettyUrl' => true,
