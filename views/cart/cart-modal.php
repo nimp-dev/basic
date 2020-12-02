@@ -11,7 +11,6 @@ use yii\helpers\Html;
                     <th>Кол-во</th>
                     <th>Цена</th>
                     <th>Сумма</th>
-                    <th><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
                 </tr>
             </thead>
             <tbody>
@@ -23,8 +22,7 @@ use yii\helpers\Html;
                             <?= $item['qty']?>
                             <span data-id="<?= $id ?>" class="glyphicon glyphicon-plus text-danger pluse" aria-hidden="true"></span></td>
                     <td><?= $item['price']?></td>
-                    <td><?= $item['price']*$item['qty']?></td>
-                    <td><span data-id="<?= $id ?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
+                    <td><?= $item['price']*$item['qty']?> <span data-id="<?= $id ?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
                 </tr>
             <?php endforeach?>
                 <tr  style="font-weight: bold;">

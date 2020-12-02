@@ -77,7 +77,8 @@ use yii\widgets\LinkPager;
 <?php foreach ($menu as $value) :?>
     <?php if($value['id']!= 0) :?> 
         <div class="row cat-border_prod">
-        <h1><a id="<?=trim($value['name'])?>"><?=trim($value['name'])?></a></h1>
+            <a id="<?=trim($value['name'])?>" class="anchor"></a>
+        <h1><a><?=trim($value['name'])?></a></h1>
             <?php foreach ($value->product as $prod):?>
                 <?php $mainImg = $prod->getImage(); ?>               
                                                 <div class="col-md-4">

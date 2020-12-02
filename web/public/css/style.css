@@ -1925,6 +1925,10 @@ ul {
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
+.submenu li a {
+    font-size: 16px
+}
+
 .topmenu > li {
   display: inline-block;
   /*margin-right: 20px;*/
@@ -2173,6 +2177,13 @@ h6 {
      height: 100%;
     
 }
+.anchor {
+top: -50px;
+display: inline-block;
+position: relative;
+height: 1px;
+width: 1px;
+}
 
 /*  index menu */
 /*.sale-wrap {
@@ -2324,4 +2335,10 @@ h6 {
     overflow: hidden;
     border-radius: 50%;
     margin-right: 5px;blog-
+}
+.table-striped img {
+     border-radius: 8px;
+     height: 50px;
+     width: 50px;
+     max-width: 50px;
 }

@@ -90,6 +90,7 @@ class CartController extends AppController
         $session->open();
         $this->setMeta('Корзина'); 
         $order = new Order();
+        $mail = Info::findOne(1); //поменять
         if($order->load(Yii::$app->request->post()) ){
             // debug(Yii::$app->request->post());
             $order->qty=$session['cart.qty'];
@@ -101,7 +102,7 @@ class CartController extends AppController
               Yii::$app->session->setFlash('success', 'Ваш заказ принят. Менеджер вскоре свяжется с Вами.');
                Yii::$app->mailer->compose('order', ['session' => $session, 'order'=>$order])
                     ->setFrom(['egorkonopka@ukr.net'=>'http://basic/'])
-                    ->setTo('egorkonopka93@gmail.com')
+                    ->setTo($mail->mail)
                     ->setSubject('Заказ')
                     ->send();
                 $session->remove('cart');
