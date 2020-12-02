@@ -83,7 +83,7 @@ use yii\widgets\LinkPager;
                                                 <div class="col-md-4">
                                                     <div class="blog-card blog-card-blog">
                                                         <div class="blog-card-image">
-                                                            <a href="#"> <?= Html::img($mainImg->getUrl(),['alt'=>$prod['img'],'style' => 'width:350px;height: 218px'])?> </a>
+                                                            <a href="#"> <?= Html::img($mainImg->getPath(),['alt'=>$prod['img'],'style' => 'width:350px;height: 218px'])?> </a>
                                                             <div class="ripple-cont"></div>
                                                         </div>
                                                         <div class="blog-table">

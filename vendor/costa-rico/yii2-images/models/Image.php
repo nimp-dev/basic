@@ -60,15 +60,15 @@ class Image extends \yii\db\ActiveRecord
         return $url;
     }
 
-    public function getPath($size = false){
+public function getPath($size = false){
         $urlSize = ($size) ? '_'.$size : '';
         $base = $this->getModule()->getCachePath();
         $sub = $this->getSubDur();
 
         $origin = $this->getPathToOrigin();
 
-        $filePath = $base.DIRECTORY_SEPARATOR.
-            $sub.DIRECTORY_SEPARATOR.$this->urlAlias.$urlSize.'.'.pathinfo($origin, PATHINFO_EXTENSION);;
+        $filePath = $base.'/'.
+            $sub.'/'.$this->urlAlias.$urlSize.'.'.pathinfo($origin, PATHINFO_EXTENSION);;
         if(!file_exists($filePath)){
             $this->createVersion($origin, $size);
 
@@ -77,7 +77,7 @@ class Image extends \yii\db\ActiveRecord
             }
         }
 
-        return $filePath;
+        return 'http://basic/'.$filePath;
     }
 
     public function getContent($size = false){
