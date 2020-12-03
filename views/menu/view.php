@@ -47,7 +47,7 @@ use yii\widgets\LinkPager;
                 <div class="fixed-div">
                                 <nav class="four">
                                   <ul class="topmenu">
-                                    <li><a href="#"><?=$info->name?> <i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><?=$info->name?> <i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
                                     <li><a onclick="return getCart()" href="#">корзина <i class="fa fa-shopping-cart"></i></a></li>
                                     <li><a>все меню <i class="fas fa-angle-double-down" aria-hidden="true"></i></a>
                                       <ul class="submenu">
