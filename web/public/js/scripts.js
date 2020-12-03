@@ -263,4 +263,9 @@ $(function(){
         });
     });
 
+         $(function () {
+        $("#btn2").click(function () {
+            $("#myModal2").modal('show');
+        });
+    });
  // // создаём модальное окно

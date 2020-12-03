@@ -3,7 +3,11 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
 ?>
-
+<?php
+date_default_timezone_set('Etc/GMT-2');
+$ctime = date('H:i:s');
+// echo $ctime;
+?>
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <!-- fixed-box -->
@@ -47,7 +51,7 @@ use yii\widgets\LinkPager;
                 <div class="fixed-div">
                                 <nav class="four">
                                   <ul class="topmenu">
-                                    <li><a href="#"><?=$info->name?> <i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+                                    <li><a href="#myModal2" id="btn2" ><?=$info->name?> <i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
                                     <li><a onclick="return getCart()" href="#">корзина <i class="fa fa-shopping-cart"></i></a></li>
                                     <li><a>все меню <i class="fas fa-angle-double-down" aria-hidden="true"></i></a>
                                       <ul class="submenu">
@@ -70,6 +74,35 @@ use yii\widgets\LinkPager;
                             </div>
                         </div>
                             <!-- зачем? -->
+<div id="myModal2" class="modal fade">
+        <div class="modal-dialog" style="text-align: center;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title"><?=$info->name?></h4>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    <p class="m-b-10 f-w-600">Phone</p>
+                    <h6 class="text-muted f-w-400"><?= $info->phone?></h6>
+                    <div class="b-b-default"></div>
+                    <p class="m-b-10 f-w-600">Доставка</p>
+                    <h6 class="text-muted f-w-400">TAXI (бесплатно от 300грн)</h6>
+                    <div class="b-b-default"></div>
+                    <p class="m-b-10 f-w-600">Время работы</p>
+                    <h6 class="text-muted f-w-400"> <?= substr($info->start_at,11,5)?> - <?= substr($info->end_at,11,5)?>
+                    <?php if($ctime > $info->start_at & $ctime < $info->end_at ) :?>
+                    <i  style="color:green;" class="fa fa-unlock" aria-hidden="true"></i>
+                    <?php else :?>
+                    <i class="fa fa-lock" aria-hidden="true"></i>   
+                    <?php endif ;?>
+                    </h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
             <div class="row">
                     <!--  -->
