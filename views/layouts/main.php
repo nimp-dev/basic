@@ -48,7 +48,7 @@ PublicAsset::register($this);
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav text-uppercase">
-                    <li><a data-toggle="dropdown" class="dropdown-toggle" href="index.html">Home</a>
+                    <li><a href="/">Все заведения</a>
                         
                     </li>
                 </ul>
@@ -117,129 +117,28 @@ PublicAsset::register($this);
 <!--footer start-->
 
 
-<footer class="footer-widget-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <aside class="footer-widget">
-                    <div class="about-img"><img src="/public/images/logo2.png" alt=""></div>
-                    <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
-                        accusam et justo duo dlores et ea rebum magna text ar koto din.
-                    </div>
-                    <div class="address">
-                        <h4 class="text-uppercase">contact Info</h4>
-
-                        <p> 14529/12 NK Streets, DC, KZ</p>
-
-                        <p> Phone: +123 456 78900</p>
-
-                        <p>mytreasure.com</p>
-                    </div>
-                </aside>
+<footer class="footer">
+    <div class="row">
+        <div class="col-md-4 footer-navigation">
+            <h3><a href="#">Portal<span>Food</span></a></h3>
+            <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+            <p class="company-name">PORTALFOOD.COM.UA © 2020</p>
+        </div>
+        <div class="col-md-4 footer-contacts">
+            <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                <p><span class="new-line-span">г. Каменское</span>UA</p>
             </div>
-
-            <div class="col-md-4">
-                <aside class="footer-widget">
-                    <h3 class="widget-title text-uppercase">Testimonials</h3>
-
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!--Indicator-->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <div class="single-review">
-                                    <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
-                                    </div>
-                                    <div class="author-id">
-                                        <img src="/public/images/author.png" alt="">
-
-                                        <div class="author-text">
-                                            <h4>Sophia</h4>
-
-                                            <h4>CEO, ReadyTheme</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="single-review">
-                                    <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
-                                    </div>
-                                    <div class="author-id">
-                                        <img src="/public/images/author.png" alt="">
-
-                                        <div class="author-text">
-                                            <h4>Sophia</h4>
-
-                                            <h4>CEO, ReadyTheme</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="single-review">
-                                    <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
-                                    </div>
-                                    <div class="author-id">
-                                        <img src="/public/images/author.png" alt="">
-
-                                        <div class="author-text">
-                                            <h4>Sophia</h4>
-
-                                            <h4>CEO, ReadyTheme</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </aside>
+            <div><i class="fa fa-phone footer-contacts-icon"></i>
+                <p class="footer-center-info email text-left"> +380961921770</p>
             </div>
-            <div class="col-md-4">
-                <aside class="footer-widget">
-                    <h3 class="widget-title text-uppercase">Custom Category Post</h3>
-
-
-                    <div class="custom-post">
-                        <div>
-                            <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
-                        </div>
-                        <div>
-                            <a href="<?=Url::to(['site/index'])?>" class="text-uppercase">Login</a>
-                            <span href="#" class="p-date">Register</span>
-                        </div>
-                    </div>
-                </aside>
+            <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                <p> <a href="#" target="_blank">mail@portalfood.com.ua</a></p>
             </div>
         </div>
-    </div>
-    <div class="footer-copy">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="text-center">&copy; 2020 <a href="#">Portal Food, </a> Built with <i
-                            class="fa fa-heart"></i> by <a href="#">HKA Softs</a>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4 footer-about">
+            <h4>О нас</h4>
+            <p>Предлагаем размещение Вашего заведения на нашей торговой площадке, удобная админ панель где Вы можете управлять содержимым вашей страницы, а так же  получать уведомления о новых заказах в удобной форме, много видов отчетности и другое </p>
+            <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
         </div>
     </div>
 </footer>

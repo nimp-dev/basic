@@ -9,7 +9,6 @@ $ctime = date('H:i:s');
 // echo $ctime;
 ?>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <!-- fixed-box -->
 <!-- fixed-div -->
 <!--  <div class="row">
@@ -53,7 +52,7 @@ $ctime = date('H:i:s');
                                   <ul class="topmenu">
                                     <li><a href="#myModal2" id="btn2" ><?=$info->name?> <i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
                                     <li><a onclick="return getCart()" href="#">корзина <i class="fa fa-shopping-cart"></i></a></li>
-                                    <li><a>все меню <i class="fas fa-angle-double-down" aria-hidden="true"></i></a>
+                                    <li><a>все меню <i class="fa fa-caret-square-o-down" aria-hidden="true"></i></a>
                                       <ul class="submenu">
                                         <li><?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?></li>
                                       </ul>
