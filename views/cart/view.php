@@ -73,9 +73,12 @@ use yii\helpers\Url;
 </div>    
 
 <?php else: ?>
-    <div style="padding-top: 100px;">
-</div> 
-    <h3 style="text-align: center;">Корзина пуста</h3>
-    <div style="padding-bottom: 100px;"></div>
+    <div class="empcart-head">
+        <h3>Корзина пуста</h3>
+        <img src="/public/images/cart-empty.png">
+    </div>
+    <div class="empcart">
+        <a href="/">на главную</a>
+    </div>
 <?php endif;?>
 </div>
