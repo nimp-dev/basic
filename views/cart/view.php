@@ -61,7 +61,7 @@ use yii\helpers\Url;
     </div>
 
     <hr/>
-    		
+    
         <?php $form = ActiveForm::begin()?>
         <?= $form->field($order, 'name')?>
         <?= $form->field($order, 'phone')?>

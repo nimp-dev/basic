@@ -8,7 +8,6 @@ date_default_timezone_set('Etc/GMT-2');
 $ctime = date('H:i:s');
 // echo $ctime;
 ?>
-<?= debug(Yii::$app->cache)?>
 <!-- fixed-box -->
 <!-- fixed-div -->
 <!--  <div class="row">

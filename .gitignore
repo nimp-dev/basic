@@ -4,7 +4,7 @@ logs/access.log
 logs/error.log
 # netbeans project files
 nbproject
-
+logs/access.log
 # zend studio for eclipse project files
 .buildpath
 .project
