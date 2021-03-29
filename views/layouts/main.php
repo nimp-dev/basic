@@ -45,21 +45,16 @@ PublicAsset::register($this);
             </div>
 
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: center;">
 
-                <ul class="nav navbar-nav text-uppercase">
-                    <li><a href="/">Все заведения</a>
+                <ul class="nav navbar-nav">
+                    <li><a>г. Каменское</a>
                         
                     </li>
                 </ul>
                 <div class="i_con">
-                    <ul class="nav navbar-nav text-uppercase">
-                        <?php if(!Yii::$app->user->isGuest): ?>
-
-                        <li><a href="<?= Url::to(['/site/logout']) ?>"><?= Yii::$app->user->identity['username'] ?> (Выход) </a></li>
-                        <?php endif;?>
-                        <li><a href="<?=Url::to(['/admin'])?>">Login</a></li>
-                        <li><a href="#">Register</a></li>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
                     </ul>
                 </div>
 
@@ -121,8 +116,14 @@ PublicAsset::register($this);
     <div class="row">
         <div class="col-md-4 footer-navigation">
             <h3><a href="#">Portal<span>Food</span></a></h3>
-            <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
-            <p class="company-name">PORTALFOOD.COM.UA © 2020</p>
+        </div>
+        <div class="col-md-4 footer-about">
+            <h4>for restaurants</h4>
+            <p>Предлагаем размещение Вашего заведения на торговой площадке Portal FOOD,
+ где Вы можете управлять содержимым собственной страницы на удобной админ панели.
+ Получайте уведомления о новых заказах, и контролируйте работу при помощи различных видов отчетности.</p>
+             <h4>for clients</h4>
+            <p>Мы позаботились об удобстве оформления заказа. Теперь на одной торговой площадке собраны несколько заведений, где Вы сможете сделать свой выбор! Выбирай любой ресторан, смотри их меню и оформляй заказ.</p>
         </div>
         <div class="col-md-4 footer-contacts">
             <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
@@ -134,11 +135,6 @@ PublicAsset::register($this);
             <div><i class="fa fa-envelope footer-contacts-icon"></i>
                 <p> <a href="#" target="_blank">mail@portalfood.com.ua</a></p>
             </div>
-        </div>
-        <div class="col-md-4 footer-about">
-            <h4>О нас</h4>
-            <p>Предлагаем размещение Вашего заведения на нашей торговой площадке, удобная админ панель где Вы можете управлять содержимым вашей страницы, а так же  получать уведомления о новых заказах в удобной форме, много видов отчетности и другое </p>
-            <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
         </div>
     </div>
 </footer>

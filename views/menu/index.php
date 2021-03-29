@@ -15,19 +15,22 @@ $ctime = date('H:i:s');
                     <div class="card user-card-full">
                         <div class="row m-l-0 m-r-0">
                             <div class="col-sm-4 bg-c-lite-green user-profile">
+                                <?php if($ress->id_res == 'port_place') :?>
                                 <a href="<?= Url::to(['menu/view','id'=>$ress->id_res]) ?>">
+                                <? endif ;?>
+
                                 <div class="card-block text-center text-white">
                                     <div class="m-b-25"> <img src="/public/images/<?= $ress->logo?>" class="img-radius" alt="User-Profile-Image"> </div>
-                                    <h6 class="f-w-600"><a href="<?= Url::to(['menu/view','id'=>$ress->id_res]) ?>"><?= $ress->name?></a></h6>
+                                    
                                 </div>
                                 </a>
                             </div>
                             <div class="col-sm-8">
                                 <div class="card-block">
-                                    <h6 align="center" class="p-b-5 b-b-default f-w-600">Information</h6>
+                                    <h6 align="center" class="p-b-5 b-b-default f-w-600"><?= $ress->name?></h6>
                                     <div class="row">
                                         <div align="center" class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Время работы</p>
+                                            <p class="m-b-10">Время работы</p>
                                             <h6 class="text-muted f-w-400"> <?= substr($ress->start_at,0,5)?> - <?= substr($ress->end_at,0,5)?>
                                             <?php if($ctime > $ress->start_at & $ctime < $ress->end_at ) :?>
                                             <i  style="color:green;" class="fa fa-unlock" aria-hidden="true"></i>
@@ -37,14 +40,14 @@ $ctime = date('H:i:s');
                                             </h6>
                                         </div>
                                         <div align="center" class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Phone</p>
+                                            <p class="m-b-10">Phone</p>
                                             <h6 class="text-muted f-w-400"><?= $ress->phone?></h6>
                                         </div>
                                     </div>
                                     <div class="b-b-default"></div>
                                     <div class="row">
                                         <div align="center" class="col-sm-12">
-                                            <p class="m-b-10 f-w-600">Доставка</p>
+                                            <p class="m-b-10">Доставка</p>
                                             <h6 class="text-muted f-w-400">TAXI (бесплатно от 300грн)</h6>
                                         </div>
                                     </div>

@@ -268,4 +268,26 @@ $(function(){
             $("#myModal2").modal('show');
         });
     });
+
+ $('.card-text').each(function() {
+    var $this = $(this);
+    var text = $this.html();
+  $this.data('full-text', text);
+  var small = text.substring(0, 70);
+  var isFulled = false;
+  if(small.length < text.length) {
+    $this.html(small);
+    var $button = $('<button style="border: #ffffff;background-color: #f4f4f4;border-radius: 25%;">...</button>');
+    $button.click(function() {
+        if(!isFulled) {
+        $this.html($this.data('full-text'));
+        isFulled = true;
+      } else {
+        $this.html(small);
+        isFulled = false;
+      }
+    });
+    $this.after($button);
+  }
+});
  // // создаём модальное окно

@@ -62,22 +62,12 @@ $ctime = date('H:i:s');
                 </div>
             </div>
 
-                            <!-- зачем? -->
-                        <div class="wrapper">
-                            <div class="menu">
-                            <nav class="menu-list">
-                                <h3 class="entry-title text-center"><a><?=  $info->name ?></a></h3>
-                            <?= \app\components\MenuWidget::widget(['tpl' => 'select']) ?>
-                            </nav>
-                            </div>
-                        </div>
-                            <!-- зачем? -->
 <div id="myModal2" class="modal fade">
         <div class="modal-dialog" style="text-align: center;">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title"><?=$info->name?></h4>
+                    <h2 class="modal-title"><?=$info->name?></h2>
                 </div>
                 <div class="modal-body" style="text-align: center;">
                     <p class="m-b-10 f-w-600">Phone</p>
@@ -115,7 +105,7 @@ $ctime = date('H:i:s');
                                                 <div class="col-md-4">
                                                     <div class="blog-card blog-card-blog">
                                                         <div class="blog-card-image">
-                                                            <a href="#"> <?= Html::img($mainImg->getPath(),['alt'=>$prod['img'],'style' => 'width:350px;height: 218px'])?> </a>
+                                                            <a> <?= Html::img($mainImg->getPath(),['alt'=>$prod['img'],'style' => 'width:350px;height: 218px'])?> </a>
                                                             <div class="ripple-cont"></div>
                                                         </div>
                                                         <div class="blog-table">
@@ -123,13 +113,18 @@ $ctime = date('H:i:s');
                                                             <h4 class="blog-card-caption">
                                                                 <a href="#"><?=mb_strimwidth($prod['name'],0, 16)?></a>
                                                             </h4>
-                                                            <p class="blog-card-description"><?=mb_strimwidth($prod['content'],0, 100)?></p>
+                                                            <p class="blog-card-description card-text message-content"><?=mb_strimwidth($prod['content'],0, 100)?></p>
                                                             <div class="ftr">
                                                                 <div class="author">
                                                                     <a> <img src="/public/images/<?=$info->logo?>" alt="..." class="avatar img-raised"> <span><?= $info->name?></span> </a>
                                                                 </div>
+                                                                <? if($prod->hit != 1) :?>
                                                                 <div class="stats"> <a class="add-to-cart" href="<?= Url::to(['cart/add','id'=>$prod['id'] ]) ?>" data-id="<?= $prod['id'] ?>">
                                                                             <i class="fa fa-shopping-cart"> </i><?php echo '&nbsp' ?><?= $prod['price']?> грн</a></div>
+                                                                <? else: ?> 
+                                                                <div class="stats"> <a class="add-to-cartы">
+                                                                            <?php echo '&nbsp' ?>нет</a></div>
+                                                                <?endif;?>
                                                             </div>
                                                         </div>
                                                     </div>

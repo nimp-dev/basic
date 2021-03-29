@@ -37,17 +37,79 @@ Table of contents
 -------------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@font-face {
+    font-family: 'Blushes';
+    src: url('../fonts/Blushes-Italic.eot');
+    src: local('Blushes Italic'), local('Blushes-Italic'),
+        url('../fonts/Blushes-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Blushes-Italic.woff2') format('woff2'),
+        url('../fonts/Blushes-Italic.woff') format('woff'),
+        url('../fonts/Blushes-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Blushes';
+    src: url('../fonts/Blushes-Regular.eot');
+    src: local('Blushes Regular'), local('Blushes-Regular'),
+        url('../fonts/Blushes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Blushes-Regular.woff2') format('woff2'),
+        url('../fonts/Blushes-Regular.woff') format('woff'),
+        url('../fonts/Blushes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Blushes';
+    src: url('../fonts/Blushes-BlackItalic.eot');
+    src: local('Blushes Black Italic'), local('Blushes-BlackItalic'),
+        url('../fonts/Blushes-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Blushes-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Blushes-BlackItalic.woff') format('woff'),
+        url('../fonts/Blushes-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Blushes';
+    src: url('../fonts/Blushes-Black.eot');
+    src: local('Blushes Black'), local('Blushes-Black'),
+        url('../fonts/Blushes-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Blushes-Black.woff2') format('woff2'),
+        url('../fonts/Blushes-Black.woff') format('woff'),
+        url('../fonts/Blushes-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blushes';
+    src: url('../fonts/Blushes-Italic.eot');
+    src: local('Blushes Italic'), local('Blushes-Italic'),
+        url('../fonts/Blushes-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Blushes-Italic.woff2') format('woff2'),
+        url('../fonts/Blushes-Italic.woff') format('woff'),
+        url('../fonts/Blushes-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
 /*--------------------------------------
     elements
 --------------------------------------*/
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lora', serif;;
+    /*font-style: italic;*/
     background: #F4F4F4;
 }
 
-span, p, input {
-    font-family: 'Merriweather', serif;
+span {
+    font-family: 'Blushes';
+    font-style: normal;
     line-height: 26px;
 }
 
@@ -56,8 +118,8 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
+    font-weight: 450;
+    font-family: 'Lora', serif;;
 }
 
 a {
@@ -84,7 +146,7 @@ header
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #777;
+    color: #33383b;
     line-height: 36px;
 }
 
@@ -103,7 +165,7 @@ header
 }
 
 .nav > li > a:first-child {
-    padding-left: 0;
+    padding-right: 0;
 }
 
 .main-menu.navbar-default .navbar-collapse, .navbar-default {
@@ -266,10 +328,11 @@ header
 .nav > li > a {
     position: relative;
     display: block;
-    padding: 15px 30px;
-    font-size: 12px;
+    /*padding: 15px 30px;*/
+    font-size: 20px;
     letter-spacing: 1px;
 }
+
 
 /* ===============
 post css
@@ -573,7 +636,7 @@ subscribe newsletter
     letter-spacing: 1px;
     font-size: 12px;
     padding: 9px 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lora', serif;
 }
 
 .btn-subscribe:hover {
@@ -1786,7 +1849,7 @@ padding-right:100px;
     color: #5cb85c;
     padding-left: 10px; /* Поля вокруг текста */
     padding-right: 10px; /* Поля вокруг текста */
-    background: #39b54a; /* Цвет фона */
+    background: #5cb85c; /* Цвет фона */
     color: #fff; /* Цвет текста */
     width: 100%; /* Ширина слоя */
     border-radius: 8px 8px 8px 8px;
@@ -1839,7 +1902,7 @@ padding-right:100px;
 }*/
 
 .four {
-  background: #ffffff;
+  /*background: #ffffff;*/
 /*    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
     box-shadow: 0 3px 5px 0 rgba(69, 90, 100, 1);
     border: none;*/
@@ -1850,7 +1913,7 @@ padding-right:100px;
   padding: 10px 13px;
   text-decoration: none;
   outline: none;
-  font-family: 'Lora', serif;
+  font-family: 'Blushes';
   transition: .5s linear;
 }
 .topmenu{
@@ -1907,7 +1970,7 @@ ul {
 }
 
 .four ul a i {
-  color: #337ab7;
+  color: #5cb85c;
     font-size: 20px;
 }
 
@@ -2008,9 +2071,10 @@ ul {
 }
 .cat-border_prod a{
 text-decoration: none;
-cursor: default
+cursor: default;
 }
 .cat-border_prod h1{
+    font-family: 'Blushes';
 text-align: center;
  color: #777;
 }
@@ -2061,8 +2125,8 @@ text-align: center;
 }
 
 .bg-c-lite-green {
-    background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
-    background: linear-gradient(to right, #ee5a6f, #f29263)
+    background: -webkit-gradient(linear, left top, right top, from(#e1d4c3), to(#f0e2c8));
+    background: linear-gradient(to right, #e1d4c3, #f0e2c8)
 }
 
 .user-profile {
@@ -2070,11 +2134,14 @@ text-align: center;
 }
 
 .card-block {
-    padding: 1.25rem
+    padding: 1.25rem;
+    /*font-family: blushes;*/
+
 }
 
 .m-b-25 {
-    margin-bottom: 25px;
+    margin-bottom: 17px;
+    margin-top: 17px;
 }
 
 .img-radius {
@@ -2082,8 +2149,8 @@ text-align: center;
 }
 
 .m-b-25 img {
-   width: 160px;
-   height: 160px;
+   width: 180px;
+   height: 180px;
    border-radius: 100px;
 }
 
@@ -2114,6 +2181,9 @@ h6 {
 }
 
 .p-b-5 {
+    font-family: 'Blushes';
+    font-style: normal;
+    
     padding-bottom: 5px !important
 }
 
@@ -2126,6 +2196,8 @@ h6 {
 }
 
 .text-muted {
+        font-family:'Lora', serif;;
+       font-weight: 300;
     color: #919aa3 !important
 }
 
@@ -2152,7 +2224,6 @@ h6 {
 
 .p-b-5 {
     padding-bottom: 5px !important;
-    color: #337ab7;
 }
 
 .m-b-10 {
@@ -2279,8 +2350,8 @@ width: 1px;
     margin-top: 5px;
 }
 .blog-card-caption {
-    font-weight: 700;
-    font-family: "Roboto Slab", "Times New Roman", serif;
+    font-weight: 400;
+    font-family: 'Lora', serif;
 }
 .fa {
     display: inline-block;
@@ -2344,7 +2415,7 @@ width: 1px;
 }
 
 footer {
-    background: linear-gradient(to right, #ee5a6f, #f29263);
+    background: linear-gradient(to right, #e1d4c3, #f0e2c8);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
@@ -2364,12 +2435,13 @@ footer {
 }
 
 .footer-navigation h3 a {
+    font-family: 'Lora', serif;
     text-decoration: none;
-    color: #fff
+    color: #33383b
 }
 
 .footer-navigation h3 span {
-    color: #337ab7
+    color: #5cb85c
 }
 
 .footer-navigation p.links a {
@@ -2392,12 +2464,12 @@ footer {
 
 .footer-contacts p {
     display: inline-block;
-    color: #ffffff;
+    color: #33383b;
     vertical-align: middle
 }
 
 .footer-contacts p a {
-    color: #337ab7;
+    color: #33383b;
     text-decoration: none
 }
 
@@ -2410,7 +2482,7 @@ footer {
     border-radius: 50%;
     text-align: center;
     line-height: 38px;
-    margin: 10px 15px 10px 0
+    margin: 10px 10px 10px 0
 }
 
 span.new-line-span {
@@ -2424,7 +2496,7 @@ span.new-line-span {
 
 .footer-about h4 {
     display: block;
-    color: #fff;
+    color: #5cb85c;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 20px
@@ -2491,4 +2563,8 @@ div.social-links {
     border-radius: 4px;
     text-decoration: none;
     color: #777;
+}
+
+.modal-header h2{
+    font-family: 'Blushes';
 }

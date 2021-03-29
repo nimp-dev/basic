@@ -36,7 +36,6 @@ use yii\helpers\Html;
     
 <?php else: ?>
     <div class="empcart-head">
-        <h3>Корзина пуста</h3>
         <img src="/public/images/cart-empty.png">
     </div>
 <?php endif;?>
